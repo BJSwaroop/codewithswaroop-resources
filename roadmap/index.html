@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Tech Career Roadmap | CodeWithSwaroop</title>
+    <meta name="description" content="Step-by-step, month-by-month roadmap to get a tech job in 2026. From Tier-3 to 1 Crore. By @codewithswaroop.">
+    <meta property="og:title" content="2026 Tech Career Roadmap | CodeWithSwaroop">
+    <meta property="og:description" content="The exact path from zero to job-ready. Month-by-month plan with free resources.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0f0f13; color: #e0e0e0; line-height: 1.6; }
+
+        .hero {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
+            padding: 60px 20px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233,69,96,0.08) 0%, transparent 50%);
+            animation: pulse 6s ease-in-out infinite;
+        }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        .hero-badge {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: clamp(26px, 5vw, 42px);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .hero h1 span { color: #e94560; }
+        .hero p {
+            font-size: 16px;
+            color: #a0a0b8;
+            max-width: 520px;
+            margin: 0 auto 8px;
+            position: relative;
+        }
+        .hero .by { font-size: 14px; color: #e94560; font-weight: 600; position: relative; }
+
+        .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+        /* Steps Overview */
+        .steps-overview {
+            padding: 40px 0 20px;
+        }
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #e94560;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .step-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid #1e1e2e;
+        }
+        .step-num {
+            background: #0f3460;
+            color: white;
+            font-weight: 800;
+            font-size: 13px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-row .text { font-size: 15px; color: #c0c0d8; }
+        .step-row .text strong { color: white; }
+
+        /* Timeline */
+        .timeline { padding: 30px 0 20px; }
+        .month-card {
+            position: relative;
+            margin-bottom: 24px;
+            padding-left: 32px;
+        }
+        .month-card::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: -24px;
+            width: 2px;
+            background: #2a2a3e;
+        }
+        .month-card:last-child::before { display: none; }
+        .month-card .dot {
+            position: absolute;
+            left: 4px;
+            top: 16px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #e94560;
+            border: 3px solid #0f0f13;
+        }
+        .month-header {
+            background: #0f3460;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 16px;
+            border-radius: 8px 8px 0 0;
+        }
+        .month-body {
+            background: #1a1a2e;
+            border: 1px solid #2a2a3e;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 18px 16px;
+        }
+        .month-body ul {
+            padding-left: 18px;
+            margin-bottom: 12px;
+        }
+        .month-body li {
+            font-size: 14px;
+            color: #b0b0c8;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .month-body li strong { color: #e0e0f0; }
+        .swaroop-tip {
+            font-style: italic;
+            font-size: 13px;
+            color: #2ecc71;
+            padding: 8px 12px;
+            background: rgba(46,204,113,0.08);
+            border-radius: 6px;
+            border-left: 3px solid #2ecc71;
+            margin-bottom: 10px;
+        }
+        .resources {
+            font-size: 12px;
+            color: #f39c12;
+            font-weight: 500;
+        }
+        .resources a {
+            color: #f39c12;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .resources a:hover { color: #e94560; }
+
+        /* Daily Schedule */
+        .schedule-section { padding: 30px 0 20px; }
+        .schedule-section h2 {
+            font-size: 24px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 6px;
+        }
+        .schedule-section h2 span { color: #e94560; }
+        .schedule-section .subtitle { color: #888; font-size: 14px; margin-bottom: 20px; }
+        .sched-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+        .sched-row:nth-child(odd) { background: #1a1a2e; }
+        .sched-row:nth-child(even) { background: #151520; }
+        .sched-row .time { color: #888; font-weight: 500; flex-shrink: 0; width: 130px; }
+        .sched-row .activity { color: #c0c0d8; flex: 1; }
+        .sched-row .dur { color: #e94560; font-weight: 600; flex-shrink: 0; width: 70px; text-align: right; }
+
+        /* Courses */
+        .courses-section { padding: 40px 0; }
+        .courses-section h2 { font-size: 24px; font-weight: 800; color: white; margin-bottom: 6px; }
+        .courses-section h2 span { color: #e94560; }
+        .courses-section .subtitle { color: #888; font-size: 14px; margin-bottom: 24px; }
+        .course-card {
+            display: flex;
+            gap: 16px;
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+            border: 1px solid #2a2a3e;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .course-card:hover { border-color: #e94560; transform: translateY(-2px); }
+        .course-card .emoji {
+            font-size: 28px;
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: #12121a;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .course-card .details h4 { font-size: 15px; font-weight: 700; color: white; margin-bottom: 2px; }
+        .course-card .details p { font-size: 13px; color: #888; margin-bottom: 4px; }
+        .course-card .tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(233,69,96,0.15);
+            color: #e94560;
+        }
+        .course-card .tag.free { background: rgba(46,204,113,0.15); color: #2ecc71; }
+
+        /* Quotes */
+        .quotes-section { padding: 30px 0; text-align: center; }
+        .quote-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            font-style: italic;
+            margin-bottom: 24px;
+            padding: 0 20px;
+            line-height: 1.5;
+        }
+        .quote-text span { color: #e94560; }
+
+        /* CTA */
+        .cta-footer {
+            text-align: center;
+            padding: 40px 20px 60px;
+            background: linear-gradient(180deg, transparent, #1a1a2e);
+        }
+        .cta-footer h2 { font-size: 22px; font-weight: 800; color: white; margin-bottom: 8px; }
+        .cta-footer p { color: #888; font-size: 14px; margin-bottom: 20px; }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e94560;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .cta-btn:hover { background: #d63850; transform: translateY(-2px); }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-links a { color: #666; font-size: 13px; text-decoration: none; transition: color 0.2s; }
+        .social-links a:hover { color: #e94560; }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-badge">FREE ROADMAP</div>
+    <h1>2026 Tech <span>Career Roadmap</span></h1>
+    <p>Step-by-step, month-by-month plan to go from zero to job-ready. From Tier-3 to 1 Crore — this is the exact path.</p>
+    <div class="by">by @codewithswaroop</div>
+</div>
+
+<div class="container">
+
+    <!-- 4-STEP FRAMEWORK -->
+    <div class="steps-overview">
+        <div class="section-label">THE 4-STEP FRAMEWORK</div>
+        <div class="step-row">
+            <div class="step-num">1</div>
+            <div class="text"><strong>Pick ONE language</strong> (Python or Java) — go deep, not wide</div>
+        </div>
+        <div class="step-row">
+            <div class="step-num">2</div>
+            <div class="text"><strong>DSA basics</strong> — 100 problems, interview-clear level (not competitive programming)</div>
+        </div>
+        <div class="step-row">
+            <div class="step-num">3</div>
+            <div class="text"><strong>Build 2-3 REAL projects</strong> — push to GitHub — deploy live demos</div>
+        </div>
+        <div class="step-row">
+            <div class="step-num">4</div>
+            <div class="text"><strong>Aptitude + Communication</strong> — companies test this FIRST</div>
+        </div>
+    </div>
+
+    <!-- MONTH-BY-MONTH TIMELINE -->
+    <div class="timeline">
+        <div class="section-label">MONTH-BY-MONTH BREAKDOWN</div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 1: Foundation — Pick Your Language</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>Pick ONE language:</strong> Python (easier, more AI/ML jobs) or Java (more enterprise jobs). DON'T do both.</li>
+                    <li><strong>Daily:</strong> 1 hour learning + 30 min coding practice</li>
+                    <li><strong>Week 1-2:</strong> Variables, data types, loops, functions, strings</li>
+                    <li><strong>Week 3-4:</strong> OOP concepts, file handling, basic error handling</li>
+                    <li><strong>Build:</strong> 2-3 small programs (calculator, to-do list, quiz game)</li>
+                </ul>
+                <div class="swaroop-tip">"Both cheyyalanukoku — oka daanlo deep ga vellu. Depth > breadth."</div>
+                <div class="resources">Free: <a href="https://www.youtube.com/watch?v=GmdGv5ndX54&list=PLS8lzSv6JRJ2OC7KVp05jqtY4MgLsitdX" target="_blank">Python Course by Swaroop (YouTube)</a> | <a href="https://www.codewithswaroop.com/s/store/courses/" target="_blank">codewithswaroop.com</a></div>
+            </div>
+        </div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 2: DSA Basics — Part 1</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>Topics:</strong> Arrays, Strings, Linked Lists, Stacks, Queues</li>
+                    <li><strong>Daily:</strong> 2 problems on HackerRank or LeetCode (Easy only)</li>
+                    <li><strong>Pattern:</strong> Understand pattern > memorize solution. Learn WHY, not WHAT.</li>
+                    <li><strong>Track:</strong> Maintain a problem log — note which patterns you struggle with</li>
+                </ul>
+                <div class="swaroop-tip">"Competitive programming level kaadu — Interview-clear level! 100 problems chalu."</div>
+                <div class="resources">Free: NeetCode.io | HackerRank Easy | <a href="https://www.codewithswaroop.com/courses/JAVA--DSA-Notes-6692695d797b6b6337a53e77" target="_blank">DSA Notes by Swaroop</a></div>
+            </div>
+        </div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 3: DSA Part 2 + Git & GitHub</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>Topics:</strong> Trees, Graphs (basic), Sorting, Searching, Recursion</li>
+                    <li><strong>Daily:</strong> 2-3 problems + 1 revision problem from Month 2</li>
+                    <li><strong>NEW: Git & GitHub</strong> — create repos, push code, make PRs</li>
+                    <li><strong>Push ALL your DSA solutions to GitHub</strong> — recruiters check your profile</li>
+                </ul>
+                <div class="swaroop-tip">"GitHub lo green squares dikhao — consistency proof becomes your resume."</div>
+                <div class="resources">Free: Git tutorial by Kunal Kushwaha | GitHub Student Pack</div>
+            </div>
+        </div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 4: Project 1 — Full Stack Web App</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>Pick a stack:</strong> MERN (MongoDB, Express, React, Node) or Django + React</li>
+                    <li><strong>Build something REAL:</strong> Not a tutorial clone. Solve a real problem.</li>
+                    <li><strong>Ideas:</strong> Placement tracker, study group finder, exam prep platform</li>
+                    <li><strong>Must have:</strong> User auth, database, API, deployed live (Vercel/Render — free)</li>
+                    <li><strong>README:</strong> Clear README with screenshots, tech stack, how to run</li>
+                </ul>
+                <div class="swaroop-tip">"Tutorial projects se job nahi milta. Build something YOUR friends would actually use."</div>
+                <div class="resources">Free: <a href="https://www.codewithswaroop.com/courses/Web-Development-Foundation-Course-650d64c9e4b0c36255fc3990" target="_blank">Web Dev Course by Swaroop</a> | Vercel (free hosting) | MongoDB Atlas (free)</div>
+            </div>
+        </div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 5: Project 2 + Aptitude Prep Begins</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>Project 2:</strong> Different tech stack or domain (API, ML model, mobile app)</li>
+                    <li><strong>Deploy + demo video:</strong> Record a 2-min walkthrough for your portfolio</li>
+                    <li><strong>Aptitude prep starts:</strong> 30 min/day — Quant, Logical Reasoning, Verbal</li>
+                    <li><strong>Focus:</strong> Number series, percentages, probability, reading comprehension</li>
+                </ul>
+                <div class="swaroop-tip">"Companies ki first round aptitude hoti hai. Skills great but aptitude fail = out."</div>
+                <div class="resources">Free: IndiaBix | PrepInsta | <a href="https://www.codewithswaroop.com/courses/Placement-MockTests-FREE-66920b16cab50d4400143ffe" target="_blank">Free Placement Mock Tests by Swaroop</a></div>
+            </div>
+        </div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 6: Communication + Resume + LinkedIn</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>Communication:</strong> Practice speaking about projects in English. Record yourself.</li>
+                    <li><strong>Resume:</strong> Use the ATS-friendly template from @codewithswaroop</li>
+                    <li><strong>LinkedIn:</strong> Complete profile, connect with 50+ people in target companies</li>
+                    <li><strong>Mock interviews:</strong> Practice with friends — DSA + HR + project discussion</li>
+                </ul>
+                <div class="swaroop-tip">"Resume reject hone ka #1 reason: ATS filter. Use the template I gave you."</div>
+                <div class="resources">Free: <a href="/resume/" target="_blank">ATS Resume Template</a> | Pramp (free mock interviews)</div>
+            </div>
+        </div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 7-8: Apply + Interview Prep</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>Apply daily:</strong> 5-10 applications/day on LinkedIn, Naukri, company career pages</li>
+                    <li><strong>Customize resume</strong> for each role — match keywords from job description</li>
+                    <li><strong>DSA revision:</strong> Revise top 50 patterns, focus on Medium-level now</li>
+                    <li><strong>System Design basics:</strong> URL shortener, chat system, parking lot</li>
+                    <li><strong>Behavioral prep:</strong> STAR method for "tell me about a time..." questions</li>
+                </ul>
+                <div class="swaroop-tip">"Rejection milega. Bohot milega. It's normal. Mujhe bhi mila. Keep applying."</div>
+                <div class="resources">Free: Naukri.com | LinkedIn Jobs | AngelList | Glassdoor</div>
+            </div>
+        </div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 9-10: Level Up — Negotiate + Specialize</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>If you have offers:</strong> NEGOTIATE. Research market rates on AmbitionBox.</li>
+                    <li><strong>If not yet:</strong> Upskill in one specialty (Cloud/DevOps/ML/Frontend)</li>
+                    <li><strong>Online presence:</strong> Write 2-3 LinkedIn posts about your projects</li>
+                    <li><strong>Network:</strong> Attend meetups, webinars, college placement events</li>
+                </ul>
+                <div class="swaroop-tip">"3.2 LPA offer vachindhi ante settle avvaku if you have skills. Negotiate or keep building."</div>
+                <div class="resources"><a href="https://www.codewithswaroop.com/courses/Java-Spring-Boot-Course-688dd57f43495d71b2e7854c" target="_blank">Java Full Stack Course</a> | AmbitionBox | Dev.to</div>
+            </div>
+        </div>
+
+        <div class="month-card">
+            <div class="dot"></div>
+            <div class="month-header">MONTH 11-12: Consolidate + Give Back</div>
+            <div class="month-body">
+                <ul>
+                    <li><strong>Start strong:</strong> First 90 days — learn the codebase, ship small wins</li>
+                    <li><strong>Keep learning:</strong> The job is not the end. It's Month 1 of your career.</li>
+                    <li><strong>Side project:</strong> Keep 1 active project to stay sharp</li>
+                    <li><strong>Give back:</strong> Help juniors. Share resources. Answer DMs.</li>
+                </ul>
+                <div class="swaroop-tip">"Job milne ke baad learning bandh mat karo. Real growth job ke andar hoti hai."</div>
+                <div class="resources">Coursera (free audit) | AWS Free Tier | Open Source on GitHub</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAILY SCHEDULE -->
+    <div class="schedule-section">
+        <h2>Daily <span>Schedule</span> Template</h2>
+        <p class="subtitle">Adjust based on your college schedule. Consistency > intensity.</p>
+
+        <div class="sched-row">
+            <div class="time">6:00 - 7:00 AM</div>
+            <div class="activity">DSA Practice (2 problems)</div>
+            <div class="dur">1 hr</div>
+        </div>
+        <div class="sched-row">
+            <div class="time">College Hours</div>
+            <div class="activity">Attend classes + take notes</div>
+            <div class="dur">—</div>
+        </div>
+        <div class="sched-row">
+            <div class="time">4:00 - 5:30 PM</div>
+            <div class="activity">Project Work / Learning</div>
+            <div class="dur">1.5 hrs</div>
+        </div>
+        <div class="sched-row">
+            <div class="time">5:30 - 6:00 PM</div>
+            <div class="activity">Aptitude Practice</div>
+            <div class="dur">30 min</div>
+        </div>
+        <div class="sched-row">
+            <div class="time">8:00 - 9:00 PM</div>
+            <div class="activity">Revision + GitHub push</div>
+            <div class="dur">1 hr</div>
+        </div>
+        <div class="sched-row">
+            <div class="time">9:00 - 9:30 PM</div>
+            <div class="activity">Communication / LinkedIn</div>
+            <div class="dur">30 min</div>
+        </div>
+    </div>
+
+    <!-- COURSES -->
+    <div class="courses-section">
+        <h2>Accelerate with <span>Swaroop's Courses</span></h2>
+        <p class="subtitle">Follow the roadmap free — or fast-track with structured courses</p>
+
+        <a href="https://www.codewithswaroop.com/courses/Placement-MockTests-FREE-66920b16cab50d4400143ffe" target="_blank" class="course-card">
+            <div class="emoji">🎯</div>
+            <div class="details">
+                <h4>Placement Mock Tests</h4>
+                <p>Practice with real placement-style questions</p>
+                <span class="tag free">FREE</span>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=GmdGv5ndX54&list=PLS8lzSv6JRJ2OC7KVp05jqtY4MgLsitdX" target="_blank" class="course-card">
+            <div class="emoji">🐍</div>
+            <div class="details">
+                <h4>Python Full Course Telugu (YouTube)</h4>
+                <p>Zero to Hero — 2M+ views, the most popular Telugu Python course</p>
+                <span class="tag free">FREE ON YOUTUBE</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/courses/C-Foundation-Course-65369f70e4b060abf1fde88e" target="_blank" class="course-card">
+            <div class="emoji">⚡</div>
+            <div class="details">
+                <h4>C Foundation Course</h4>
+                <p>Build your programming foundation from scratch</p>
+                <span class="tag">FOUNDATION</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/courses/Web-Development-Foundation-Course-650d64c9e4b0c36255fc3990" target="_blank" class="course-card">
+            <div class="emoji">🌐</div>
+            <div class="details">
+                <h4>Web Development Foundation</h4>
+                <p>HTML, CSS, JS — build your first real website</p>
+                <span class="tag">WEB DEV</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/courses/DSA-Java--AI-Course-with-Certification-660c4345fa82cf311322d862" target="_blank" class="course-card">
+            <div class="emoji">🤖</div>
+            <div class="details">
+                <h4>DSA Java + AI Course with Certification</h4>
+                <p>The 2026 placement combo — DSA + AI skills</p>
+                <span class="tag">CERTIFICATION</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/courses/Java-Spring-Boot-Course-688dd57f43495d71b2e7854c" target="_blank" class="course-card">
+            <div class="emoji">☕</div>
+            <div class="details">
+                <h4>Java Full Stack (Spring Boot)</h4>
+                <p>Backend to frontend — complete Java full stack</p>
+                <span class="tag">FULL STACK</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/courses/CWS-ALL-Courses-687718a4fa53163cb955df48" target="_blank" class="course-card">
+            <div class="emoji">🎓</div>
+            <div class="details">
+                <h4>ALL Courses Bundle with Certifications</h4>
+                <p>Get everything — best value for serious learners</p>
+                <span class="tag">BUNDLE</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- QUOTES -->
+    <div class="quotes-section">
+        <p class="quote-text">"You don't need a Tier-1 college.<br>You need <span>Tier-1 effort.</span>"</p>
+        <p class="quote-text">"I was unplaced in 4th year. Now I've earned <span>1 Crore by age 24.</span> From a Tier-3 college."</p>
+        <p class="quote-text">"No one guided me. That's why I created this — so <span>YOU</span> don't have to figure it out alone."</p>
+    </div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-footer">
+    <h2>Follow for daily career tips</h2>
+    <p>Roadmaps, resources, placement prep, and real talk — all free</p>
+    <a href="https://instagram.com/codewithswaroop" target="_blank" class="cta-btn">
+        Follow @codewithswaroop
+    </a>
+    <div class="social-links">
+        <a href="https://youtube.com/@SwaroopVITB" target="_blank">YouTube</a>
+        <a href="https://instagram.com/codewithswaroop" target="_blank">Instagram</a>
+        <a href="https://linkedin.com/in/swaroop-talks" target="_blank">LinkedIn</a>
+        <a href="https://www.codewithswaroop.com" target="_blank">Website</a>
+    </div>
+</div>
+
+</body>
+</html>

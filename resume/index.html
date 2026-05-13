@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free ATS Resume Template | CodeWithSwaroop</title>
+    <meta name="description" content="Free ATS-friendly resume template for engineering students. Used by 500+ students. By @codewithswaroop.">
+    <meta property="og:title" content="Free ATS Resume Template | CodeWithSwaroop">
+    <meta property="og:description" content="Your resume is getting rejected by ATS filters — not your skills. Get this free template used by 500+ students.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0f0f13; color: #e0e0e0; line-height: 1.6; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 60px 20px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233,69,96,0.08) 0%, transparent 50%);
+            animation: pulse 6s ease-in-out infinite;
+        }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        .hero-badge {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .hero h1 span { color: #e94560; }
+        .hero p {
+            font-size: 16px;
+            color: #a0a0b8;
+            max-width: 500px;
+            margin: 0 auto 8px;
+            position: relative;
+        }
+        .hero .by {
+            font-size: 14px;
+            color: #e94560;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+        /* Resume Template Card */
+        .template-section {
+            padding: 40px 0;
+        }
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #e94560;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .resume-card {
+            background: #ffffff;
+            color: #1a1a2e;
+            border-radius: 12px;
+            padding: 32px 28px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .resume-card .r-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+        .resume-card .r-contact {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 16px;
+            word-break: break-all;
+        }
+        .resume-card .r-divider {
+            height: 2px;
+            background: #e94560;
+            margin-bottom: 20px;
+        }
+        .resume-card .r-section {
+            font-size: 13px;
+            font-weight: 700;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 20px 0 8px;
+        }
+        .resume-card .r-section:first-of-type { margin-top: 0; }
+        .resume-card p, .resume-card li {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .resume-card ul {
+            padding-left: 18px;
+            margin: 4px 0;
+        }
+        .resume-card li { margin-bottom: 3px; }
+        .resume-card .r-entry {
+            font-weight: 600;
+            font-size: 13px;
+            color: #1a1a2e;
+            margin-bottom: 2px;
+        }
+        .resume-card .r-entry span { color: #e94560; font-weight: 500; }
+        .resume-card .r-skills-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2px 8px;
+            font-size: 13px;
+        }
+        .resume-card .r-skills-grid .label { font-weight: 600; color: #1a1a2e; }
+        .resume-card .r-skills-grid .value { color: #444; }
+        .resume-card .r-footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 20px;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
+        }
+
+        /* ATS Tips Section */
+        .tips-section {
+            padding: 40px 0 20px;
+        }
+        .tips-section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .tips-section h2 span { color: #e94560; }
+        .tips-section .subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+        .tip-card {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            border: 1px solid #2a2a3e;
+        }
+        .tip-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .tip-card h3.green { color: #2ecc71; }
+        .tip-card h3.red { color: #e94560; }
+        .tip-card h3.blue { color: #3498db; }
+        .tip-card h3.orange { color: #f39c12; }
+        .tip-card ul { padding-left: 18px; }
+        .tip-card li {
+            font-size: 14px;
+            color: #b0b0c8;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .tip-card li strong { color: #e0e0f0; }
+
+        /* Free Score Check */
+        .score-tools {
+            display: grid;
+            gap: 12px;
+            margin-top: 12px;
+        }
+        .score-tool {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #12121a;
+            padding: 14px 16px;
+            border-radius: 8px;
+            border: 1px solid #2a2a3e;
+        }
+        .score-tool .num {
+            background: #e94560;
+            color: white;
+            font-weight: 800;
+            font-size: 14px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .score-tool .info .name { font-weight: 600; font-size: 14px; color: white; }
+        .score-tool .info .desc { font-size: 12px; color: #888; }
+
+        /* Course Recommendations */
+        .courses-section {
+            padding: 40px 0;
+        }
+        .courses-section h2 {
+            font-size: 24px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 6px;
+        }
+        .courses-section h2 span { color: #e94560; }
+        .courses-section .subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .course-card {
+            display: flex;
+            gap: 16px;
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+            border: 1px solid #2a2a3e;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .course-card:hover {
+            border-color: #e94560;
+            transform: translateY(-2px);
+        }
+        .course-card .emoji {
+            font-size: 28px;
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: #12121a;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .course-card .details h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2px;
+        }
+        .course-card .details p {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+        .course-card .tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(233,69,96,0.15);
+            color: #e94560;
+        }
+        .course-card .tag.free { background: rgba(46,204,113,0.15); color: #2ecc71; }
+
+        /* CTA Footer */
+        .cta-footer {
+            text-align: center;
+            padding: 40px 20px 60px;
+            background: linear-gradient(180deg, transparent, #1a1a2e);
+        }
+        .cta-footer h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .cta-footer p {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e94560;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .cta-btn:hover { background: #d63850; transform: translateY(-2px); }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #666;
+            font-size: 13px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .social-links a:hover { color: #e94560; }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-badge">FREE RESOURCE</div>
+    <h1>ATS-Friendly <span>Resume Template</span></h1>
+    <p>90% of resumes get rejected by ATS before a human sees them. This template fixes that.</p>
+    <div class="by">by @codewithswaroop</div>
+</div>
+
+<!-- RESUME TEMPLATE -->
+<div class="container">
+    <div class="template-section">
+        <div class="section-label">THE TEMPLATE</div>
+        <div class="resume-card">
+            <div class="r-name">[YOUR FULL NAME]</div>
+            <div class="r-contact">[your.email@gmail.com] | [+91-XXXXXXXXXX] | [linkedin.com/in/yourname] | [github.com/yourname] | [City, State]</div>
+            <div class="r-divider"></div>
+
+            <div class="r-section">Career Objective</div>
+            <p>[Motivated B.Tech graduate in Computer Science seeking a Software Development role where I can apply my skills in Python, Java, and web development to build impactful products. Eager to contribute to a fast-paced team and grow as a full-stack developer.]</p>
+
+            <div class="r-section">Education</div>
+            <div class="r-entry">[B.Tech in Computer Science & Engineering] | [Your College], [City] | [2022 - 2026]</div>
+            <ul>
+                <li>CGPA: [8.2/10] (mention only if > 7.0)</li>
+                <li>Relevant Coursework: Data Structures, Algorithms, DBMS, OS, Computer Networks</li>
+            </ul>
+            <div class="r-entry" style="margin-top:10px">[Intermediate / +2] | [School Name], [City] | [2020 - 2022]</div>
+            <ul><li>Percentage: [92%]</li></ul>
+
+            <div class="r-section">Technical Skills</div>
+            <div class="r-skills-grid">
+                <div class="label">Languages:</div><div class="value">[Python, Java, C++, JavaScript]</div>
+                <div class="label">Frameworks:</div><div class="value">[React, Django, Flask, Spring Boot]</div>
+                <div class="label">Databases:</div><div class="value">[MySQL, PostgreSQL, MongoDB]</div>
+                <div class="label">Tools:</div><div class="value">[Git, Docker, VS Code, Postman]</div>
+                <div class="label">Platforms:</div><div class="value">[Linux, AWS (basic), Heroku]</div>
+            </div>
+
+            <div class="r-section">Projects</div>
+            <div class="r-entry">[Project Name 1] | <em>Python, Flask, MySQL</em> | <span>[GitHub Link]</span></div>
+            <ul>
+                <li>[Built a full-stack web app that helps students track placement prep progress]</li>
+                <li>[Implemented user auth, dashboard with analytics, and automated email reminders]</li>
+                <li>[500+ active users within 2 months of launch]</li>
+            </ul>
+            <div class="r-entry" style="margin-top:10px">[Project Name 2] | <em>React, Node.js, MongoDB</em> | <span>[GitHub Link]</span></div>
+            <ul>
+                <li>[Developed a real-time chat app with WebSocket support for 100+ concurrent users]</li>
+                <li>[Reduced API response time by 40% through query optimization]</li>
+            </ul>
+
+            <div class="r-section">Experience / Internships</div>
+            <div class="r-entry">[Intern - Software Development] | [Company Name] | [Jun 2025 - Aug 2025]</div>
+            <ul>
+                <li>[Built REST APIs serving 10K+ requests/day using Django and PostgreSQL]</li>
+                <li>[Collaborated with a 5-member team using Agile/Scrum methodology]</li>
+            </ul>
+
+            <div class="r-section">Certifications & Achievements</div>
+            <ul>
+                <li>[AWS Cloud Practitioner Certified — 2025]</li>
+                <li>[HackerRank 5-Star in Python — 2025]</li>
+                <li>[Winner, College Hackathon — Built [project] in 24 hrs]</li>
+            </ul>
+
+            <div class="r-section">Extra-Curricular</div>
+            <ul>
+                <li>[Technical Lead, Coding Club — organized 3 hackathons with 200+ participants]</li>
+                <li>[Open source contributor — 10+ PRs merged on [repo name]]</li>
+            </ul>
+
+            <div class="r-footer">Template by @codewithswaroop | Replace all [brackets] with your info | Keep it to 1 page!</div>
+        </div>
+    </div>
+
+    <!-- ATS TIPS -->
+    <div class="tips-section">
+        <h2>ATS <span>Cheat Sheet</span></h2>
+        <p class="subtitle">Why 90% of resumes get rejected before a human sees them — and how to fix it</p>
+
+        <div class="tip-card">
+            <h3 class="blue">What is ATS?</h3>
+            <p style="font-size:14px;color:#b0b0c8;">ATS (Applicant Tracking System) is software that companies use to filter resumes BEFORE a recruiter sees them. If your resume isn't ATS-friendly, it gets auto-rejected — no matter how good your skills are. TCS, Infosys, Wipro, Accenture — all use it.</p>
+        </div>
+
+        <div class="tip-card">
+            <h3 class="green">DO's — ATS will LOVE your resume</h3>
+            <ul>
+                <li><strong>Clean, simple format</strong> — no tables, no columns, no graphics inside the body</li>
+                <li><strong>Standard section headings:</strong> Education, Skills, Experience, Projects (ATS looks for these exact words)</li>
+                <li><strong>Keywords from job description</strong> — if they say "Python developer", your resume must say "Python"</li>
+                <li><strong>Standard font:</strong> Arial, Calibri, Helvetica, Times New Roman (10-12pt)</li>
+                <li><strong>Save as PDF</strong> (unless they specifically ask for .docx)</li>
+                <li><strong>Name & contact at TOP</strong> — not in header/footer (ATS can't read those)</li>
+                <li><strong>Quantify achievements:</strong> "40% faster" beats "improved performance"</li>
+            </ul>
+        </div>
+
+        <div class="tip-card">
+            <h3 class="red">DON'Ts — ATS will REJECT your resume</h3>
+            <ul>
+                <li><strong>NO Canva templates</strong> with columns, graphics, icons, or skill bars</li>
+                <li><strong>NO images or photos</strong> — ATS can't read images at all</li>
+                <li><strong>NO creative section names</strong> like "My Superpowers" instead of "Skills"</li>
+                <li><strong>NO text inside text boxes</strong> — ATS skips them</li>
+                <li><strong>NO headers/footers</strong> for important info — ATS ignores them</li>
+                <li><strong>NEVER lie</strong> about skills — companies verify during interviews</li>
+            </ul>
+        </div>
+
+        <div class="tip-card">
+            <h3 class="orange">The Keyword Hack</h3>
+            <p style="font-size:14px;color:#b0b0c8;margin-bottom:12px;">Open the job description. Copy the skills section. Match your resume wording to THEIR wording exactly. If they say "React.js", don't write "ReactJS". If they say "Machine Learning", don't write "ML". ATS matches EXACT keywords.</p>
+        </div>
+
+        <div class="tip-card">
+            <h3 class="blue">Free ATS Score Check</h3>
+            <p style="font-size:14px;color:#b0b0c8;margin-bottom:12px;">Upload your resume to these free tools before applying:</p>
+            <div class="score-tools">
+                <div class="score-tool">
+                    <div class="num">1</div>
+                    <div class="info">
+                        <div class="name">Jobscan.co</div>
+                        <div class="desc">Paste job description + resume, get match score</div>
+                    </div>
+                </div>
+                <div class="score-tool">
+                    <div class="num">2</div>
+                    <div class="info">
+                        <div class="name">ResumeWorded.com</div>
+                        <div class="desc">Free ATS score + improvement tips</div>
+                    </div>
+                </div>
+                <div class="score-tool">
+                    <div class="num">3</div>
+                    <div class="info">
+                        <div class="name">TopResume.com</div>
+                        <div class="desc">Free expert review of your resume</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RECOMMENDED COURSES -->
+    <div class="courses-section">
+        <h2>Level Up <span>Your Skills</span></h2>
+        <p class="subtitle">Courses by @codewithswaroop to help you land that job</p>
+
+        <a href="https://www.codewithswaroop.com/courses/Placement-MockTests-FREE-66920b16cab50d4400143ffe" target="_blank" class="course-card">
+            <div class="emoji">🎯</div>
+            <div class="details">
+                <h4>Placement Interview Preparation (Mock Tests)</h4>
+                <p>Practice with real placement-style questions</p>
+                <span class="tag free">FREE</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/courses/JAVA--DSA-Notes-6692695d797b6b6337a53e77" target="_blank" class="course-card">
+            <div class="emoji">📘</div>
+            <div class="details">
+                <h4>Java + DSA Notes</h4>
+                <p>Complete notes for Java fundamentals & data structures</p>
+                <span class="tag">NOTES</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/courses/DSA-Java--AI-Course-with-Certification-660c4345fa82cf311322d862" target="_blank" class="course-card">
+            <div class="emoji">🤖</div>
+            <div class="details">
+                <h4>DSA Java + AI Course with Certification</h4>
+                <p>DSA + AI combo — the 2026 placement essential</p>
+                <span class="tag">CERTIFICATION</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/courses/Java-Spring-Boot-Course-688dd57f43495d71b2e7854c" target="_blank" class="course-card">
+            <div class="emoji">☕</div>
+            <div class="details">
+                <h4>Java Full Stack (Spring Boot) Course</h4>
+                <p>Backend to frontend — complete full stack in Java</p>
+                <span class="tag">FULL STACK</span>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=GmdGv5ndX54&list=PLS8lzSv6JRJ2OC7KVp05jqtY4MgLsitdX" target="_blank" class="course-card">
+            <div class="emoji">🐍</div>
+            <div class="details">
+                <h4>Python Full Course in Telugu (FREE on YouTube)</h4>
+                <p>Zero to Hero — 2M+ views, 9 hours of content</p>
+                <span class="tag free">FREE ON YOUTUBE</span>
+            </div>
+        </a>
+
+        <a href="https://www.codewithswaroop.com/s/store/courses/" target="_blank" class="course-card">
+            <div class="emoji">🎓</div>
+            <div class="details">
+                <h4>Browse All Courses</h4>
+                <p>Python, C, Web Dev, Java, AI and more at codewithswaroop.com</p>
+                <span class="tag">ALL COURSES</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- CTA FOOTER -->
+<div class="cta-footer">
+    <h2>Follow for daily career tips</h2>
+    <p>Resume templates, roadmaps, placement prep — all free</p>
+    <a href="https://instagram.com/codewithswaroop" target="_blank" class="cta-btn">
+        Follow @codewithswaroop
+    </a>
+    <div class="social-links">
+        <a href="https://youtube.com/@SwaroopVITB" target="_blank">YouTube</a>
+        <a href="https://instagram.com/codewithswaroop" target="_blank">Instagram</a>
+        <a href="https://linkedin.com/in/swaroop-talks" target="_blank">LinkedIn</a>
+        <a href="https://www.codewithswaroop.com" target="_blank">Website</a>
+    </div>
+</div>
+
+</body>
+</html>
