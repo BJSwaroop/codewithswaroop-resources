@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Salary Negotiation Script for Freshers | CodeWithSwaroop</title>
+<meta name="description" content="Word-for-word salary negotiation scripts for freshers — email template, call script, WhatsApp version and the answer to 'package is fixed'.">
+<meta property="og:title" content="Salary Negotiation Script for Freshers | CodeWithSwaroop">
+<meta property="og:description" content="Don't accept your first offer without reading this. Free copy-paste scripts.">
+<meta property="og:type" content="website">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --bg: #07131b;
+    --card: #0d1c27;
+    --card-hover: #122531;
+    --accent: #10d9a3;
+    --accent-glow: rgba(16, 217, 163, 0.25);
+    --accent-ink: #04281e;
+    --accent2: #3b82f6;
+    --red: #ff5c72;
+    --green: #34d399;
+    --yellow: #fdcb6e;
+    --blue: #74b9ff;
+    --orange: #e17055;
+    --text: #e6f0ee;
+    --text-dim: #8aa0a5;
+    --border: #1e3340;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(7, 19, 27, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    flex-shrink: 0;
+  }
+  .topbar-brand { font-size: 13px; font-weight: 700; color: var(--text-dim); }
+  .topbar-brand span { color: var(--accent); }
+  .progress-wrap { display: flex; align-items: center; gap: 8px; }
+  .progress-bar { width: 80px; height: 4px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.4s ease; }
+  .progress-text { font-size: 11px; color: var(--text-dim); font-weight: 600; }
+
+  .pages-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+  .page {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    padding: 24px 20px 80px;
+    overflow-y: auto;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.35s ease;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+  }
+  .page::-webkit-scrollbar { display: none; }
+  .page[data-state="active"] { transform: translateX(0); opacity: 1; }
+  .page[data-state="next"] { transform: translateX(100%); opacity: 0; }
+  .page[data-state="prev"] { transform: translateX(-100%); opacity: 0; }
+
+  .nav-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+    gap: 10px;
+    padding: 16px 20px;
+    background: linear-gradient(transparent, var(--bg) 30%);
+    z-index: 50;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .nav-btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .nav-prev { background: var(--card); color: var(--text-dim); border: 1px solid var(--border); }
+  .nav-next { background: var(--accent); color: var(--accent-ink); }
+  .nav-btn:active { transform: scale(0.97); }
+
+  /* ─── CONTENT STYLES ─── */
+  .hero-badge { display: inline-block; background: var(--accent); color: var(--accent-ink); font-size: 10px; font-weight: 800; padding: 4px 14px; border-radius: 20px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+  .hero-title { font-size: 26px; font-weight: 900; line-height: 1.2; margin-bottom: 10px; background: linear-gradient(135deg, #fff, #7df5d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-sub { font-size: 14px; color: var(--text-dim); line-height: 1.6; margin-bottom: 20px; }
+
+  .section-title { font-size: 18px; font-weight: 800; margin-bottom: 14px; }
+  .section-sub { font-size: 13px; color: var(--text-dim); margin-bottom: 16px; line-height: 1.5; }
+
+  .result-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 10px;
+  }
+  .result-title { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+  .result-msg { font-size: 12px; color: var(--text-dim); line-height: 1.5; margin-bottom: 12px; }
+
+  /* Info boxes */
+  .info-box {
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .info-box.green { background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.22); color: var(--green); }
+  .info-box.blue { background: rgba(116,185,255,0.08); border: 1px solid rgba(116,185,255,0.22); color: var(--blue); }
+  .info-box.yellow { background: rgba(253,203,110,0.08); border: 1px solid rgba(253,203,110,0.22); color: var(--yellow); }
+  .info-box.red { background: rgba(255,92,114,0.08); border: 1px solid rgba(255,92,114,0.22); color: var(--red); }
+  .info-box b { font-weight: 700; }
+
+  .warn-box {
+    background: rgba(253,203,110,0.08);
+    border: 1px solid rgba(253,203,110,0.25);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--yellow);
+  }
+
+  /* Script box — the copyable negotiation scripts */
+  .script-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--text);
+    user-select: text;
+    -webkit-user-select: text;
+  }
+  .script-box .sb-label { font-size: 10px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; user-select: none; -webkit-user-select: none; }
+  .script-box .blank { color: var(--yellow); font-weight: 700; }
+  .copy-btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: var(--card);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .copy-btn:active { transform: scale(0.97); }
+  .copy-btn.copied { background: rgba(52,211,153,0.15); color: var(--green); border-color: var(--green); }
+
+  /* Step cards */
+  .step-card {
+    display: flex;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+  .step-num {
+    width: 30px; height: 30px;
+    border-radius: 10px;
+    background: rgba(16,217,163,0.14);
+    color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900;
+    flex-shrink: 0;
+  }
+  .step-body { flex: 1; }
+  .step-title { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+  .step-text { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
+  .step-text b { color: var(--text); }
+
+  /* Mistake cards */
+  .mistake-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+  .mistake-label { font-size: 11px; font-weight: 800; color: var(--red); margin-bottom: 4px; }
+  .mistake-title { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+  .mistake-text { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+  .mistake-text b { color: var(--green); }
+
+  /* Stat row */
+  .stat-row { display: flex; gap: 8px; margin-bottom: 10px; }
+  .stat-box {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-box .sv { font-size: 17px; font-weight: 900; }
+  .stat-box .sl { font-size: 9px; color: var(--text-dim); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; line-height: 1.4; }
+
+  /* CTA */
+  .cta-card {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .cta-title { font-size: 18px; font-weight: 900; color: #fff; margin-bottom: 8px; }
+  .cta-sub { font-size: 13px; color: rgba(255,255,255,0.85); margin-bottom: 16px; line-height: 1.5; }
+  .cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #fff;
+    color: #0a8f6c;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .cta-btn:active { transform: scale(0.96); }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="topbar-brand">CodeWith<span>Swaroop</span></div>
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="pFill"></div></div>
+      <div class="progress-text" id="pText">1/7</div>
+    </div>
+  </div>
+
+  <div class="pages-container" id="pagesContainer">
+
+    <!-- PAGE 1: HERO -->
+    <div class="page" data-state="active">
+      <div class="hero-badge">Salary Negotiation</div>
+      <h1 class="hero-title">Don't Accept Your First Offer Without Reading This.</h1>
+      <p class="hero-sub">90% of freshers accept their first offer the same day it arrives — and silently lose &#8377;1-3 LPA. These word-for-word scripts show you how to ask professionally, without sounding demanding.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="sv" style="color:var(--accent);">90%</div><div class="sl">Freshers never negotiate</div></div>
+        <div class="stat-box"><div class="sv" style="color:var(--green);">&#8377;1-3L</div><div class="sl">Left on the table / year</div></div>
+        <div class="stat-box"><div class="sv" style="color:var(--blue);">2 min</div><div class="sl">To use the script</div></div>
+      </div>
+
+      <div class="result-card">
+        <div style="font-size:13px;font-weight:700;margin-bottom:8px;">What's Inside</div>
+        <div style="font-size:12px;color:var(--text-dim);line-height:1.7;">
+          <div style="margin-bottom:6px;">📧 <b>Exact Email Template</b> — copy, fill the blanks, send</div>
+          <div style="margin-bottom:6px;">📞 <b>Call Script</b> — what to say when HR calls, word for word</div>
+          <div style="margin-bottom:6px;">💬 <b>WhatsApp Version</b> — a short script that works in chat</div>
+          <div style="margin-bottom:6px;">🔒 <b>"Package Is Fixed" Answer</b> — the 3-step response</div>
+          <div style="margin-bottom:6px;">⚠️ <b>5 Mistakes to Avoid</b> — these put your offer at risk</div>
+          <div>💡 <b>Bonus Tips</b> — how much to ask, and when</div>
+        </div>
+      </div>
+
+      <div class="warn-box">
+        ⚠️ <b>Note:</b> Negotiation isn't demanding — it's asking professionally. Polite asks don't get offers withdrawn. Every script here is gratitude-first by design.
+      </div>
+    </div>
+
+    <!-- PAGE 2: WHY NEGOTIATE -->
+    <div class="page" data-state="next">
+      <div class="section-title">🤔 Why Negotiate At All?</div>
+      <p class="section-sub">Most freshers don't know this — a small difference in starting salary becomes a huge difference over your career.</p>
+
+      <div class="result-card">
+        <div class="result-title">The Compounding Effect</div>
+        <div class="result-msg">Every hike and every job switch is calculated as a percentage of your current CTC. Start &#8377;1 LPA higher, and every future offer is benchmarked against the bigger number.</div>
+        <div class="info-box green" style="margin-bottom:0;">
+          <b>Example:</b> 4.5 LPA vs 5.5 LPA start. Across 3 job switches (avg 30% hike each), the 5-year difference = <b>&#8377;8-12 lakhs+ total</b>. From one email.
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-title">"Will They Withdraw My Offer?" — The Fear, Debunked</div>
+        <div class="result-msg">This is the biggest fear — and it's almost never true. The company already spent weeks on your hiring: interviews, HR rounds, approvals. After all that effort, nobody cancels an offer because you politely asked a question.</div>
+        <div class="info-box red" style="margin-bottom:0;">
+          <b>When IS an offer at risk?</b> Being demanding, giving ultimatums, or faking competing offers. None of those are in these scripts.
+        </div>
+      </div>
+
+      <div class="info-box blue">
+        <b>Golden Rule:</b> Your leverage is highest after the offer letter arrives and before you accept. That's your window. Negotiating after accepting looks unprofessional.
+      </div>
+
+      <div class="info-box yellow">
+        <b>Swaroop's Take:</b> Asking is free. Worst case, they say no — you accept gracefully and lose nothing. Best case, &#8377;1-3 LPA extra. Zero risk, lakhs of upside. Ask!
+      </div>
+    </div>
+
+    <!-- PAGE 3: EMAIL TEMPLATE -->
+    <div class="page" data-state="next">
+      <div class="section-title">📧 The Email Template</div>
+      <p class="section-sub">This is the exact email — copy it, fill the <span style="color:var(--yellow);font-weight:700;">yellow blanks</span>, and send. Tone: grateful + confident + flexible.</p>
+
+      <button class="copy-btn" onclick="copyScript('emailScript', this)">📋 Copy Email Template</button>
+
+      <div class="script-box" id="emailScript">
+        <div class="sb-label">Email Script</div>
+        <b>Subject:</b> Regarding Compensation — <span class="blank">[Role]</span> Offer | <span class="blank">[Your Name]</span><br><br>
+        Dear <span class="blank">[HR Name]</span>,<br><br>
+        Thank you so much for offering me the <span class="blank">[Role]</span> position at <span class="blank">[Company]</span>. I'm genuinely excited about the opportunity and the team I'd be working with.<br><br>
+        Before I formally accept, I wanted to ask if there is any flexibility in the compensation. Based on my skills in <span class="blank">[Skill 1]</span> and <span class="blank">[Skill 2]</span>, and the current market range for this role, I was hoping for a package closer to <span class="blank">&#8377;[X] LPA</span>.<br><br>
+        I want to be transparent — <span class="blank">[Company]</span> is my first choice, and if we can work this out, I'm ready to accept immediately.<br><br>
+        Thank you for considering my request. Looking forward to hearing from you.<br><br>
+        Warm regards,<br>
+        <span class="blank">[Your Name]</span><br>
+        <span class="blank">[Phone Number]</span>
+      </div>
+
+      <div class="info-box green">
+        <b>Why this works:</b> It opens with gratitude (goodwill), gives a specific number with a reason (serious candidate), and ends with "ready to accept immediately" (an easy close for HR). Those 3 elements get positive replies.
+      </div>
+
+      <div class="warn-box">
+        ⚠️ <b>The [X] value:</b> Ask for 10-20% above the offered package. For a 4.5 LPA offer, ask 5-5.4. Asking for double ends the conversation.
+      </div>
+    </div>
+
+    <!-- PAGE 4: CALL SCRIPT -->
+    <div class="page" data-state="next">
+      <div class="section-title">📞 The Call Script</div>
+      <p class="section-sub">When HR calls, don't panic — follow this flow. Exact words for every step.</p>
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Start With Thanks</div>
+          <div class="step-text">"Thank you so much for the offer! I'm really excited about the role and the company."<br><b>Never open with the salary topic.</b></div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">The Ask — Polite & Specific</div>
+          <div class="step-text">"I had one small question — is there any flexibility in the compensation? Based on my skills and the market range for this role, I was hoping for something closer to <b>&#8377;[X] LPA</b>."</div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">The Pause — Silence Is Power</div>
+          <div class="step-text">After you ask, <b>stay silent</b>. Even if it feels awkward. Don't nervously fill the gap with "sorry, it's okay if not possible..." — that weakens your ask. Let HR respond first.</div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">If They Say "Let Me Check"</div>
+          <div class="step-text">"That would be great, thank you! Should I wait for your confirmation before signing the offer letter?" — <b>fix a timeline</b> and establish your right to follow up.</div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-title">Close On a Positive Note</div>
+          <div class="step-text">"Either way, I'm very excited to join the team. Thank you for considering!" — <b>protect the relationship</b>, whatever the answer.</div>
+        </div>
+      </div>
+
+      <div class="info-box blue">
+        <b>Pro Tip:</b> Even if they agree verbally on the call — ask "Could you please share the revised details over email?" <b>If it's not in email, it's not official.</b>
+      </div>
+    </div>
+
+    <!-- PAGE 5: WHATSAPP VERSION -->
+    <div class="page" data-state="next">
+      <div class="section-title">💬 The WhatsApp Version</div>
+      <p class="section-sub">Half of Indian hiring happens on WhatsApp. If that's where HR is talking to you — use this short version.</p>
+
+      <button class="copy-btn" onclick="copyScript('waScript', this)">📋 Copy WhatsApp Message</button>
+
+      <div class="script-box" id="waScript">
+        <div class="sb-label">WhatsApp Script</div>
+        Hi <span class="blank">[HR Name]</span>, thank you so much for the offer! I'm really excited about joining <span class="blank">[Company]</span>. 🙏<br><br>
+        I had one small request — based on my skills and the current market range for this role, would it be possible to revisit the compensation to around <span class="blank">&#8377;[X] LPA</span>?<br><br>
+        If we can work this out, I'm ready to accept right away. Thank you for considering!
+      </div>
+
+      <div class="result-card">
+        <div class="result-title">WhatsApp Negotiation Rules</div>
+        <div style="font-size:12px;color:var(--text-dim);line-height:1.8;">
+          <div>✅ Keep it short — 3 small paragraphs max</div>
+          <div>✅ One polite emoji is enough (🙏) — don't overdo it</div>
+          <div>✅ Give 24-48 hrs for a reply — don't spam</div>
+          <div>✅ Always confirm final numbers over email</div>
+          <div>❌ No voice notes — text stays professional</div>
+          <div>❌ No "Bro/Sir please" tone — confident and polite</div>
+        </div>
+      </div>
+
+      <div class="info-box green">
+        <b>Remember:</b> WhatsApp is casual, but your tone shouldn't be. And after any agreement in chat — always ask: "Could you share the revised offer letter over email?"
+      </div>
+    </div>
+
+    <!-- PAGE 6: PACKAGE FIXED + MISTAKES -->
+    <div class="page" data-state="next">
+      <div class="section-title">🔒 When HR Says "Package Is Fixed"</div>
+      <p class="section-sub">The most common reply freshers hear. Most people give up here — but even when base can't move, you still have options.</p>
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Acknowledge — Don't Fight It</div>
+          <div class="step-text">"I completely understand that the package is standardized for freshers."<br>Arguing with HR is a dead end. Accept it and move to step 2.</div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">Pivot — Ask Beyond Base Salary</div>
+          <div class="step-text">"In that case, would it be possible to consider a <b>joining bonus</b>, <b>relocation assistance</b>, or an <b>early performance review at 6 months</b> instead?"<br>Base may be fixed — these often aren't.</div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">Get It In Writing</div>
+          <div class="step-text">Whatever they agree to — "Could you please include this in the offer letter / confirm over email?" <b>Verbal promises are forgotten after you join.</b></div>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:20px;">⚠️ 5 Mistakes That Kill Negotiations</div>
+
+      <div class="mistake-card">
+        <div class="mistake-label">MISTAKE #1</div>
+        <div class="mistake-title">Faking a Competing Offer</div>
+        <div class="mistake-text">"Company X is offering me more" — if HR asks for proof, you're trapped. <b>Only mention offers you actually have.</b></div>
+      </div>
+
+      <div class="mistake-card">
+        <div class="mistake-label">MISTAKE #2</div>
+        <div class="mistake-title">Giving Ultimatums</div>
+        <div class="mistake-text">"Increase it or I won't join" — that's a threat, not a negotiation. <b>Show flexibility, not demands.</b></div>
+      </div>
+
+      <div class="mistake-card">
+        <div class="mistake-label">MISTAKE #3</div>
+        <div class="mistake-title">The "I Deserve" Tone</div>
+        <div class="mistake-text">Entitlement kills goodwill instantly. <b>Ask with a reason: "based on my skills and the market range."</b></div>
+      </div>
+
+      <div class="mistake-card">
+        <div class="mistake-label">MISTAKE #4</div>
+        <div class="mistake-title">Negotiating After Accepting</div>
+        <div class="mistake-text">Asking for more after signing looks unprofessional. <b>Your window: after the offer, before you accept.</b></div>
+      </div>
+
+      <div class="mistake-card">
+        <div class="mistake-label">MISTAKE #5</div>
+        <div class="mistake-title">Comparing With Friends' Packages</div>
+        <div class="mistake-text">"My friend got 6 LPA" is irrelevant to HR. <b>Cite market data instead — Glassdoor, AmbitionBox, LinkedIn.</b></div>
+      </div>
+    </div>
+
+    <!-- PAGE 7: BONUS TIPS + CTA -->
+    <div class="page" data-state="next">
+      <div class="section-title">💡 Bonus Tips — The Cheat Sheet</div>
+      <p class="section-sub">Quick rules to remember. 90% of negotiation success is in these basics.</p>
+
+      <div class="result-card">
+        <div style="font-size:12px;color:var(--text-dim);line-height:1.9;">
+          <div>💰 <b style="color:var(--text);">How much to ask?</b> 10-20% above the offered CTC — a defensible range</div>
+          <div>⏰ <b style="color:var(--text);">When?</b> After the offer letter, before accepting — the only window</div>
+          <div>📊 <b style="color:var(--text);">Research:</b> Check role + city salaries on AmbitionBox, Glassdoor, LinkedIn</div>
+          <div>🙏 <b style="color:var(--text);">First response:</b> Always thank them for any offer — negotiate after</div>
+          <div>📧 <b style="color:var(--text);">Always email:</b> Verbal or chat agreements need email confirmation</div>
+          <div>😊 <b style="color:var(--text);">If it's a "no":</b> Accept gracefully — then prove your worth in the first 6 months</div>
+        </div>
+      </div>
+
+      <div class="info-box green">
+        <b>Final word from Swaroop:</b> You already earned the offer — you cleared the interviews and proved your skills. There's nothing wrong with asking for what you're worth. The scripts are ready. Use them, ask confidently. All the best! 🚀
+      </div>
+
+      <div style="margin-top:16px;">
+        <div class="cta-card">
+          <div class="cta-title">Did This Script Get You a Hike?</div>
+          <div class="cta-sub">DM me your success story! Follow for placement prep, resume tips and more free career resources.</div>
+          <a class="cta-btn" href="https://instagram.com/codewithswaroop" target="_blank">Follow @codewithswaroop</a>
+        </div>
+        <div class="result-card" style="text-align:center;">
+          <div style="font-size:12px;color:var(--text-dim);margin-bottom:8px;">Built with ❤️ by</div>
+          <div style="font-size:16px;font-weight:900;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">CodeWithSwaroop</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:6px;">Free resource — share it with friends who got offers!</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end pages-container -->
+
+  <div class="nav-bottom">
+    <button class="nav-btn nav-prev" id="prevBtn" onclick="go(-1)">Back</button>
+    <button class="nav-btn nav-next" id="nextBtn" onclick="go(1)">Next →</button>
+  </div>
+</div>
+
+<script>
+const pages = document.querySelectorAll('.page');
+const total = pages.length;
+let cur = 0;
+
+function go(d) {
+  const n = cur + d;
+  if (n < 0 || n >= total) return;
+  pages[cur].dataset.state = d > 0 ? 'prev' : 'next';
+  pages[cur].scrollTop = 0;
+  cur = n;
+  pages[cur].dataset.state = 'active';
+  pages[cur].scrollTop = 0;
+  document.getElementById('pFill').style.width = ((cur + 1) / total * 100) + '%';
+  document.getElementById('pText').textContent = (cur + 1) + '/' + total;
+  document.getElementById('prevBtn').style.visibility = cur === 0 ? 'hidden' : 'visible';
+  document.getElementById('nextBtn').textContent = cur === total - 1 ? 'Done ✓' : 'Next →';
+  if (cur === total - 1) document.getElementById('nextBtn').onclick = function(){};
+  else document.getElementById('nextBtn').onclick = function(){ go(1); };
+}
+
+document.getElementById('prevBtn').style.visibility = 'hidden';
+document.getElementById('pFill').style.width = (1/total*100)+'%';
+
+// Swipe
+let sx=0, sy=0;
+const pc = document.getElementById('pagesContainer');
+pc.addEventListener('touchstart', e => { sx=e.touches[0].clientX; sy=e.touches[0].clientY; });
+pc.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - sx;
+  const dy = e.changedTouches[0].clientY - sy;
+  if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
+});
+
+// Keyboard
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(1);
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') go(-1);
+});
+
+// Copy script text to clipboard
+function copyScript(id, btn) {
+  const el = document.getElementById(id);
+  const label = el.querySelector('.sb-label');
+  const text = el.innerText.replace(label.innerText, '').trim();
+  const done = () => {
+    const orig = btn.textContent;
+    btn.textContent = '✅ Copied! Now fill the blanks';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2200);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+function fallbackCopy(text, done) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); done(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
