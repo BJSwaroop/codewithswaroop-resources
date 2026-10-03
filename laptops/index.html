@@ -3,551 +3,158 @@
 <meta name="description" content="Laptop picks from Amazon's official Great Indian Festival 2026 sale pages, by budget and use. Prices as of 30 Sep 2026.">
 <meta property="og:title" content="Best Laptops in the Amazon Sale 2026 | SwaroopTalks">
 <meta property="og:description" content="25 picks by budget and use, with teaser prices and watch-outs.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#131921">
 <style>
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #0f0f13; color: #e0e0e0; line-height: 1.6; }
-
-    /* Hero */
-    .hero {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-        padding: 60px 20px 40px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(233,69,96,0.08) 0%, transparent 50%);
-        animation: pulse 6s ease-in-out infinite;
-    }
-    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
-    .hero-badge {
-        display: inline-block;
-        background: #e94560;
-        color: white;
-        font-size: 11px;
-        font-weight: 700;
-        padding: 6px 16px;
-        border-radius: 20px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        position: relative;
-    }
-    .hero h1 {
-        font-size: clamp(28px, 5vw, 44px);
-        font-weight: 900;
-        color: white;
-        margin-bottom: 12px;
-        position: relative;
-    }
-    .hero h1 span { color: #e94560; }
-    .hero p {
-        font-size: 16px;
-        color: #a0a0b8;
-        max-width: 500px;
-        margin: 0 auto 8px;
-        position: relative;
-    }
-    .hero .by {
-        font-size: 14px;
-        color: #e94560;
-        font-weight: 600;
-        position: relative;
-    }
-    .hero .stat-bar {
-        display: flex;
-        justify-content: center;
-        gap: 32px;
-        margin-top: 20px;
-        position: relative;
-    }
-    .hero .stat-bar .stat {
-        text-align: center;
-    }
-    .hero .stat-bar .stat .num {
-        font-size: 24px;
-        font-weight: 800;
-        color: white;
-    }
-    .hero .stat-bar .stat .label {
-        font-size: 11px;
-        color: #a0a0b8;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
-
-    /* Section Labels */
-    .section { padding: 40px 0 20px; }
-    .section-label {
-        font-size: 12px;
-        font-weight: 700;
-        color: #e94560;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 16px;
-    }
-    .section h2 {
-        font-size: 28px;
-        font-weight: 800;
-        color: white;
-        margin-bottom: 8px;
-    }
-    .section h2 span { color: #e94560; }
-    .section .subtitle {
-        color: #888;
-        font-size: 14px;
-        margin-bottom: 28px;
-    }
-
-    /* Content Cards */
-    .card {
-        background: #1a1a2e;
-        border: 1px solid #2a2a3e;
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 16px;
-        transition: border-color 0.3s, transform 0.2s;
-    }
-    .card:hover { border-color: rgba(233,69,96,0.4); transform: translateY(-2px); }
-    .card-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 12px;
-    }
-    .card-num {
-        background: #e94560;
-        color: white;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        font-weight: 700;
-        flex-shrink: 0;
-    }
-    .card h3 {
-        font-size: 17px;
-        font-weight: 700;
-        color: white;
-    }
-    .card p {
-        font-size: 14px;
-        color: #b0b0c8;
-        line-height: 1.7;
-    }
-    .card ul {
-        padding-left: 18px;
-        margin-top: 8px;
-    }
-    .card li {
-        font-size: 14px;
-        color: #b0b0c8;
-        margin-bottom: 6px;
-        line-height: 1.5;
-    }
-    .card li strong { color: #e0e0f0; }
-
-    /* Tags */
-    .tag {
-        display: inline-block;
-        font-size: 11px;
-        font-weight: 600;
-        padding: 3px 10px;
-        border-radius: 6px;
-        margin: 8px 4px 0 0;
-    }
-    .tag-green { background: rgba(46,204,113,0.15); color: #2ecc71; }
-    .tag-blue { background: rgba(52,152,219,0.15); color: #64b5f6; }
-    .tag-amber { background: rgba(233,69,96,0.15); color: #e94560; }
-    .tag-purple { background: rgba(155,89,182,0.15); color: #bb86fc; }
-    .tag-orange { background: rgba(243,156,18,0.15); color: #f39c12; }
-
-    /* Tip Box */
-    .tip {
-        background: rgba(233,69,96,0.06);
-        border-left: 3px solid #e94560;
-        padding: 16px 20px;
-        border-radius: 0 10px 10px 0;
-        margin: 20px 0;
-        font-size: 14px;
-        color: #b0b0c8;
-        line-height: 1.7;
-    }
-    .tip strong { color: #e94560; }
-
-    /* Highlight Card (colored heading) */
-    .highlight-card {
-        background: #1a1a2e;
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 16px;
-        border: 1px solid #2a2a3e;
-    }
-    .highlight-card h3 {
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
-    .highlight-card h3.green { color: #2ecc71; }
-    .highlight-card h3.red { color: #e94560; }
-    .highlight-card h3.blue { color: #3498db; }
-    .highlight-card h3.orange { color: #f39c12; }
-    .highlight-card h3.purple { color: #bb86fc; }
-    .highlight-card p, .highlight-card li {
-        font-size: 14px;
-        color: #b0b0c8;
-        line-height: 1.6;
-    }
-    .highlight-card ul { padding-left: 18px; }
-    .highlight-card li { margin-bottom: 6px; }
-    .highlight-card li strong { color: #e0e0f0; }
-
-    /* Tool/Resource Grid Items */
-    .tool-item {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        background: #12121a;
-        padding: 16px 18px;
-        border-radius: 10px;
-        border: 1px solid #2a2a3e;
-        margin-bottom: 10px;
-        transition: border-color 0.2s;
-    }
-    .tool-item:hover { border-color: rgba(233,69,96,0.3); }
-    .tool-item .icon {
-        font-size: 24px;
-        width: 44px;
-        height: 44px;
-        background: #1a1a2e;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-    .tool-item .info .name {
-        font-weight: 600;
-        font-size: 14px;
-        color: white;
-    }
-    .tool-item .info .desc {
-        font-size: 12px;
-        color: #888;
-        margin-top: 2px;
-    }
-
-    /* Course Cards (bottom of every page) */
-    .courses-section { padding: 40px 0; }
-    .courses-section h2 {
-        font-size: 24px;
-        font-weight: 800;
-        color: white;
-        margin-bottom: 6px;
-    }
-    .courses-section h2 span { color: #e94560; }
-    .courses-section .subtitle {
-        color: #888;
-        font-size: 14px;
-        margin-bottom: 24px;
-    }
-    .course-card {
-        display: flex;
-        gap: 16px;
-        background: #1a1a2e;
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 12px;
-        border: 1px solid #2a2a3e;
-        text-decoration: none;
-        color: inherit;
-        transition: border-color 0.2s, transform 0.2s;
-    }
-    .course-card:hover { border-color: #e94560; transform: translateY(-2px); }
-    .course-card .emoji {
-        font-size: 28px;
-        flex-shrink: 0;
-        width: 48px;
-        height: 48px;
-        background: #12121a;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .course-card .details h4 {
-        font-size: 15px;
-        font-weight: 700;
-        color: white;
-        margin-bottom: 2px;
-    }
-    .course-card .details p {
-        font-size: 13px;
-        color: #888;
-        margin-bottom: 4px;
-    }
-    .course-card .ctag {
-        display: inline-block;
-        font-size: 11px;
-        font-weight: 600;
-        padding: 2px 8px;
-        border-radius: 4px;
-        background: rgba(233,69,96,0.15);
-        color: #e94560;
-    }
-    .course-card .ctag.free { background: rgba(46,204,113,0.15); color: #2ecc71; }
-
-    /* CTA Footer */
-    .cta-footer {
-        text-align: center;
-        padding: 40px 20px 60px;
-        background: linear-gradient(180deg, transparent, #1a1a2e);
-    }
-    .cta-footer h2 {
-        font-size: 22px;
-        font-weight: 800;
-        color: white;
-        margin-bottom: 8px;
-    }
-    .cta-footer p {
-        color: #888;
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-    .cta-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #e94560;
-        color: white;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 15px;
-        padding: 14px 28px;
-        border-radius: 10px;
-        transition: background 0.2s, transform 0.2s;
-    }
-    .cta-btn:hover { background: #d63850; transform: translateY(-2px); }
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-    }
-    .social-links a {
-        color: #666;
-        font-size: 13px;
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-    .social-links a:hover { color: #e94560; }
-
-    /* Back Link */
-    .back-link {
-        display: inline-block;
-        color: #e94560;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 600;
-        margin-top: 24px;
-        transition: opacity 0.2s;
-    }
-    .back-link:hover { opacity: 0.8; }
-
-    /* Grid for tools pages */
-    .tools-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-
-    
-        a.tool-item{ text-decoration:none; color:inherit; display:flex; align-items:center; transition:all .2s ease; cursor:pointer; }
-        a.tool-item:hover{ border-color:#E94560; transform:translateY(-2px); box-shadow:0 8px 24px rgba(233,69,96,.18); }
-        a.tool-item .info{ flex:1; }
-        .cert-go{ margin-left:auto; color:#E94560; font-weight:700; font-size:.9rem; white-space:nowrap; padding-left:16px; }
-
-    
-    .wa-card { display:flex; align-items:center; gap:16px; background:linear-gradient(135deg,#0f2e1d 0%,#12121a 70%);
-        border:1px solid rgba(37,211,102,.35); border-radius:14px; padding:20px; margin:8px 0 4px;
-        text-decoration:none; color:inherit; transition:border-color .2s, transform .2s, box-shadow .2s; }
-    .wa-card:hover { border-color:#25d366; transform:translateY(-2px); box-shadow:0 8px 24px rgba(37,211,102,.18); }
-    .wa-card .wa-icon { width:48px; height:48px; border-radius:12px; background:rgba(37,211,102,.14);
-        display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-    .wa-card .wa-icon svg { width:26px; height:26px; fill:#25d366; }
-    .wa-card h4 { font-size:16px; font-weight:700; color:#fff; margin-bottom:3px; }
-    .wa-card p { font-size:13px; color:#8f8fa6; line-height:1.5; }
-    .wa-card .wa-go { margin-left:auto; color:#25d366; font-weight:700; font-size:14px;
-        white-space:nowrap; flex-shrink:0; }
-    @media (max-width:420px){ .wa-card .wa-go{ display:none; } }
-
-.disc{background:#2a1f0a;border:1px solid #f39c12;color:#f5c26b;font-size:13px;line-height:1.5;padding:10px 16px;text-align:center}
-.filters{position:sticky;top:0;z-index:20;background:rgba(15,15,19,.96);backdrop-filter:blur(8px);padding:10px 0;margin:0 0 16px;border-bottom:1px solid #2a2a3e}
-.chiprow{display:flex;gap:8px;overflow-x:auto;padding:3px 2px;scrollbar-width:none}.chiprow::-webkit-scrollbar{display:none}
-.chip{flex:0 0 auto;background:#1a1a2e;border:1px solid #2a2a3e;color:#b0b0c8;border-radius:999px;padding:7px 13px;font:600 13px Inter,sans-serif;cursor:pointer;white-space:nowrap}
-.chip.on{background:#e94560;border-color:#e94560;color:#fff}.chiprow+.chiprow{margin-top:6px}
-.lap{background:#1a1a2e;border:1px solid #2a2a3e;border-radius:14px;padding:18px;margin-bottom:14px;transition:.2s}.lap:hover{border-color:#e94560;transform:translateY(-2px)}
-.lap-top{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.bud,.persona,.end{font-size:11px;font-weight:700;border-radius:6px;padding:3px 8px;text-transform:uppercase;letter-spacing:.3px}
-.bud{background:rgba(233,69,96,.15);color:#e94560}.persona{background:#12121a;color:#b0b0c8}.end{background:#f39c12;color:#111}
-.lap h3{color:#fff;font-size:17px;font-weight:800;line-height:1.3;margin-bottom:10px;overflow-wrap:anywhere}
-.specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.spec{background:#12121a;border:1px solid #2a2a3e;color:#d0d0e0;font-size:12px;border-radius:6px;padding:3px 8px;overflow-wrap:anywhere}
-.why{color:#b0b0c8;font-size:14px;line-height:1.5;margin-bottom:4px}.why b{color:#2ecc71}.watch{color:#f39c12;font-size:14px;line-height:1.5;margin-bottom:12px}
-.price{margin-bottom:12px}.today{color:#fff;font-size:20px;font-weight:800}.asof{color:#8f8fa6;font-size:12px}.teaser{color:#f5c26b;font-size:14px;font-weight:600;margin-top:3px}
-.amz{display:block;text-align:center;background:#e94560;color:#fff;font-weight:800;font-size:15px;padding:13px;border-radius:10px;text-decoration:none}.amz:hover{opacity:.9}
-.payoff-card{border-color:#f39c12;box-shadow:0 0 0 1px #f39c12 inset}
-.payoff{background:linear-gradient(135deg,#2a1f0a,#1a1a2e);border:1px solid #f39c12;border-radius:14px;padding:18px;margin-bottom:24px}
-.payoff h3{color:#fff;font-size:18px;margin:6px 0 8px}.payoff p{color:#b0b0c8;font-size:14px;line-height:1.6;margin-bottom:10px}
-.tipbox{background:#12121a;border-left:3px solid #f39c12;border-radius:10px;padding:14px 16px;margin-bottom:22px;color:#b0b0c8;font-size:14px;line-height:1.6}.tipbox h4{color:#fff;margin-bottom:6px}.tipbox code{color:#f5c26b;font-weight:700}
-.skip-row{display:flex;gap:12px;justify-content:space-between;background:#12121a;border:1px solid #2a2a3e;border-radius:12px;padding:14px;margin-bottom:10px}.skip-row h4{color:#fff;font-size:15px;margin-bottom:4px;text-decoration:line-through;text-decoration-color:#e94560}.skip-row p{color:#f39c12;font-size:13px;margin-bottom:8px}
-.skip-price{color:#8f8fa6;font-weight:700;font-size:14px;text-align:right;white-space:nowrap}.skip-price small{display:block;font-size:11px;font-weight:500}
-.ws{display:block;background:#1a1a2e;border:1px solid #e94560;border-radius:14px;padding:18px;margin-bottom:24px;text-decoration:none}.ws h3{color:#fff;font-size:18px;margin-bottom:6px}.ws p{color:#b0b0c8;font-size:14px;line-height:1.5;margin-bottom:12px}.ws span{display:inline-block;background:#e94560;color:#fff;font-weight:800;padding:10px 16px;border-radius:10px}
-.empty{display:none;color:#8f8fa6;text-align:center;padding:20px}
-footer.upd{text-align:center;color:#8f8fa6;font-size:12px;padding:16px}
+:root{--bg:#eaeded;--card:#fff;--ink:#0f1111;--mute:#565959;--line:#d5d9d9;--nav:#131921;--nav2:#232f3e;--yel:#ffd814;--yelb:#fcd200;--org:#c7511f;--red:#cc0c39;--teal:#007185;--star:#de7921;--amber:#fff4e5;--amberb:#f0b44c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.4;overflow-x:hidden}
+a{color:var(--teal)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 12px}
+header{background:var(--nav);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding:10px 12px}
+.brand{font-weight:800;font-size:17px;letter-spacing:-.2px}.brand b{color:#febd69}
+.hsub{font-size:13px;color:#ddd}.hsub strong{color:#febd69}
+.disc{background:var(--nav2);color:#ccc;font-size:12px}.disc .wrap{padding:6px 12px}
+.bar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 4px rgba(0,0,0,.06)}
+.bar .wrap{display:flex;flex-direction:column;gap:6px;padding:8px 12px}
+.row{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;align-items:center}.row::-webkit-scrollbar{display:none}
+.lbl{font-size:12px;color:var(--mute);font-weight:600;flex:none;width:58px}
+.chip{flex:none;min-height:36px;padding:0 14px;border:1px solid var(--line);border-radius:18px;background:#fff;font:inherit;font-size:13px;color:var(--ink);cursor:pointer;white-space:nowrap}
+.chip[aria-pressed=true]{background:#edfdff;border-color:var(--teal);color:var(--teal);font-weight:700}
+.sortrow{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.count{font-size:13px;color:var(--mute)}
+select{min-height:36px;border:1px solid var(--line);border-radius:8px;background:#f0f2f2;font:inherit;font-size:13px;padding:0 8px;box-shadow:0 2px 5px rgba(15,17,17,.1)}
+main{padding:12px 0 0}
+.hero{background:#fff;border-radius:8px;display:grid;grid-template-columns:1fr;overflow:hidden;margin-bottom:14px;border:2px solid #febd69}
+.hero .pic{background:#fff;display:flex;align-items:center;justify-content:center;padding:12px}
+.hero .pic img{width:100%;max-width:200px;height:auto;aspect-ratio:1;object-fit:contain}
+.hero .txt{padding:4px 16px 16px}
+.ep{display:inline-block;background:var(--nav2);color:#febd69;font-weight:800;font-size:12px;padding:4px 10px;border-radius:4px;margin-bottom:8px;letter-spacing:.3px}
+.hero h2{font-size:19px;line-height:1.3;margin-bottom:6px}
+.note{background:var(--amber);border-left:4px solid var(--amberb);padding:10px 12px;border-radius:4px;font-size:13px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media(min-width:768px){.hero .pic img{max-width:300px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.hero{grid-template-columns:320px 1fr}.hero .txt{padding:20px 24px 20px 4px}}
+@media(min-width:1080px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.tile{background:var(--card);border-radius:8px;display:flex;flex-direction:column;overflow:hidden;cursor:pointer;border:1px solid transparent;transition:box-shadow .15s}
+.tile:hover{box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.tile:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.ph{background:#f7f8f8;aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.ph img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.deal{position:absolute;left:8px;top:8px;background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:3px 7px;border-radius:3px}
+.body{padding:10px;display:flex;flex-direction:column;gap:4px;flex:1}
+.bdg{display:flex;flex-wrap:wrap;gap:4px}
+.pb{font-size:11px;font-weight:600;background:#e7f4f5;color:#0b4f5c;padding:2px 6px;border-radius:3px;line-height:1.35}
+.pb.top{background:var(--nav2);color:#febd69}.pb.wait{background:#fde7e9;color:#a0062c}
+.t{font-size:14px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.rt{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--teal)}
+.st{background:linear-gradient(90deg,var(--star) var(--p),#d5d9d9 var(--p));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:13px;letter-spacing:-1px}
+.pr{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 6px;margin-top:2px}
+.pr .p{font-size:22px;font-weight:500}.pr .p sup{font-size:12px;top:-.6em;position:relative}
+.pr .asof{font-size:11px;color:var(--mute)}
+.mrp{font-size:12px;color:var(--mute)}.mrp s{margin-right:4px}.mrp .off{color:var(--red);font-weight:600}
+.tz{align-self:flex-start;font-size:12px;font-weight:700;background:#fff3cd;color:#7a4b00;border:1px dashed #e0a800;padding:2px 7px;border-radius:4px}
+.tz.below{background:#e6f4ea;color:#1e6b33;border-color:#5aa86b}
+.spacer{flex:1}
+.btn{display:flex;align-items:center;justify-content:center;min-height:40px;background:var(--yel);border:1px solid var(--yelb);border-radius:20px;color:var(--ink);text-decoration:none;font-weight:600;font-size:13px;margin-top:6px;box-shadow:0 2px 5px rgba(213,217,217,.5)}
+.btn:hover{background:#f7ca00}
+h3.sec{font-size:20px;margin:24px 0 10px}
+.skip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media(min-width:768px){.skip{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.skip .tile{cursor:default;filter:grayscale(1);opacity:.75}
+.skip .why{font-size:12px;color:var(--red);font-weight:600}
+.box{background:#fff;border-radius:8px;padding:16px;margin-top:14px}
+.box h4{font-size:16px;margin-bottom:6px}
+.box ol{padding-left:20px;font-size:14px}.box li{margin:4px 0}
+.cta{display:grid;gap:12px;grid-template-columns:1fr;margin-top:14px}
+@media(min-width:768px){.cta{grid-template-columns:1fr 1fr}}
+.cta a.card{display:block;text-decoration:none;color:#fff;border-radius:10px;padding:16px;min-height:44px}
+.ws{background:linear-gradient(135deg,#232f3e,#37475a)}.wa{background:#128c4a}
+.cta .k{font-size:12px;opacity:.85;text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+.cta .h{font-size:18px;font-weight:800;margin:4px 0}
+.cta .go{display:inline-block;margin-top:8px;background:#fff;color:var(--ink);font-weight:700;padding:8px 14px;border-radius:18px;font-size:13px}
+footer{margin-top:24px;background:var(--nav2);color:#ccc;font-size:12px;text-align:center;padding:18px 12px 28px}
+.empty{background:#fff;border-radius:8px;padding:24px;text-align:center;color:var(--mute);grid-column:1/-1}
+dialog{border:0;padding:0;width:100%;max-width:560px;max-height:88vh;border-radius:14px 14px 0 0;margin:auto auto 0;overflow:hidden}
+@media(min-width:768px){dialog{border-radius:12px;margin:auto}}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+.sh{display:flex;flex-direction:column;max-height:88vh}
+.shh{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);align-items:flex-start}
+.shh img{width:76px;height:76px;object-fit:contain;flex:none}
+.shh h2{font-size:16px;line-height:1.3}
+.x{margin-left:auto;flex:none;width:44px;height:44px;border:0;background:#f0f2f2;border-radius:22px;font-size:22px;cursor:pointer}
+.shb{overflow-y:auto;padding:14px 16px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:12px}
+td{border-bottom:1px solid #eee;padding:7px 4px;vertical-align:top}td:first-child{color:var(--mute);width:34%;font-weight:600}
+.shb h4{font-size:14px;margin:10px 0 4px}
+.wo{background:var(--amber);border-left:4px solid var(--amberb);padding:10px 12px;border-radius:4px;font-size:13px}
+.shf{padding:10px 16px 16px;border-top:1px solid var(--line)}
+.shf .btn{min-height:46px;font-size:15px;margin:0}
 </style></head><body>
-<div class="disc">As an Amazon Associate I earn from qualifying purchases. Affiliate links: you pay nothing extra. Not sponsored.</div>
-<div class="hero"><div class="hero-badge">AMAZON GREAT INDIAN FESTIVAL 2026</div>
-<h1>Best Laptops in the <span>Amazon Sale 2026</span></h1>
-<p class="sub">Picked only from Amazon's official Great Indian Festival sale pages</p>
-<div class="by">by @SwaroopTalks</div>
-<div class="stat-bar"><div class="stat"><div class="num">25</div><div class="label">Picks</div></div>
-<div class="stat"><div class="num">5</div><div class="label">Budgets</div></div>
-<div class="stat"><div class="num">8 Oct</div><div class="label">Sale starts</div></div></div></div>
-<div class="container">
-<a href="../" class="back-link">← All Resources</a>
-<div class="tipbox"><h4>How to read the teaser price</h4>Amazon masks sale prices like <code>₹1,1_,_90</code>. Each <code>_</code> can be 0–9, so that one means anywhere from ₹1,10,090 to ₹1,19,990. <b style="color:#fff">Buy if today's price is already below the teaser low end.</b> Otherwise wait for 8 Oct.<br><small style="color:#8f8fa6">Prices change. Always check the current price on Amazon.</small></div>
-<div class="payoff"><span class="end">The one from the end of the video</span>
-<h3>HP Victus RTX 4050 (fa2531tx)</h3><div class="specs"><span class="spec">i7-13650HX</span><span class="spec">RTX 4050 6GB</span><span class="spec">24GB DDR5</span><span class="spec">144Hz</span></div>
-<p>Today ₹1,42,990 (as of 30 Sep). Sale teaser ₹1,10,090–₹1,19,990. Honest version: you only save up to about ₹40K if the sale price lands at the teaser low end <b>and</b> you add a bank card offer on top. If it lands higher, the saving is smaller.</p><a class="amz" href="https://www.amazon.in/dp/B0GT11NJ6T?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div>
-<div class="filters"><div class="chiprow"><button class="chip on" data-f="all">All</button><button class="chip" data-f="b" data-v="u40">Under ₹40K</button><button class="chip" data-f="b" data-v="b4060">₹40–60K</button><button class="chip" data-f="b" data-v="b6080">₹60–80K</button><button class="chip" data-f="b" data-v="b80120">₹80K–1.2L</button><button class="chip" data-f="b" data-v="a120">Above ₹1.2L</button></div><div class="chiprow"><button class="chip" data-f="p" data-v="student">Student/Coding</button><button class="chip" data-f="p" data-v="office">Office/Parents</button><button class="chip" data-f="p" data-v="kids">Kids</button><button class="chip" data-f="p" data-v="creators">Creators</button><button class="chip" data-f="p" data-v="gaming">Gaming</button><button class="chip" data-f="p" data-v="business">Business</button></div></div>
-<div class="section-label">ALL 25 PICKS</div>
-<div id="grid"><div class="lap" data-b="u40" data-p="kids office" id="B0H2J8DDKH">
-<div class="lap-top"><span class="bud">Under ₹40K</span><span class="persona">kids/school (parents buying)</span></div>
-<h3>ASUS Chromebook CM1405 MediaTek 4/64</h3><div class="specs"><span class="spec">MediaTek</span><span class="spec">4GB</span><span class="spec">64GB</span><span class="spec">ChromeOS</span></div>
-<p class="why"><b>Why:</b> Cheapest sale-page pick for online classes</p><p class="watch"><b>Watch out:</b> ChromeOS: no MS Office desktop app; 4GB/64GB; 18 reviews</p>
-<div class="price"><span class="today">Today ₹28,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0H2J8DDKH?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="u40" data-p="office" id="B0GV15KBMK">
-<div class="lap-top"><span class="bud">Under ₹40K</span><span class="persona">seniors/basic</span></div>
-<h3>ASUS Chromebook CX1405 Intel N50 8/128</h3><div class="specs"><span class="spec">Intel N50</span><span class="spec">8GB</span><span class="spec">ChromeOS</span></div>
-<p class="why"><b>Why:</b> Simple browsing/YouTube/mail</p><p class="watch"><b>Watch out:</b> Not Windows; 30 reviews</p>
-<div class="price"><span class="today">Today ₹39,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0GV15KBMK?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="u40" data-p="student office" id="B0GYRK1RZC">
-<div class="lap-top"><span class="bud">Under ₹40K</span><span class="persona">basic Windows (not for coding)</span></div>
-<h3>Acer Aspire One Ryzen 3 7320U</h3><div class="specs"><span class="spec">Ryzen 3 7320U</span><span class="spec">8GB LPDDR5</span><span class="spec">256GB</span><span class="spec">14in HD TN</span></div>
-<p class="why"><b>Why:</b> Cheapest Windows</p><p class="watch"><b>Watch out:</b> 8GB soldered, 256GB, HD TN</p>
-<div class="price"><span class="today">Today ₹38,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0GYRK1RZC?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b4060" data-p="student" id="B0DG2GCTD7">
-<div class="lap-top"><span class="bud">₹40–60K</span><span class="persona">coding student (first year)</span></div>
-<h3>Acer SmartChoice Aspire Lite AL15-41 Ryzen 5 5625U</h3><div class="specs"><span class="spec">Ryzen 5 5625U</span><span class="spec">16GB</span><span class="spec">512GB</span><span class="spec">15.6in FHD</span><span class="spec">1.59 kg</span></div>
-<p class="why"><b>Why:</b> Only 16GB sale-page pick under 60K; 925 reviews</p><p class="watch"><b>Watch out:</b> TN panel; older chip</p>
-<div class="price"><span class="today">Today ₹59,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0DG2GCTD7?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b4060" data-p="office" id="B0FZKZTXSN">
-<div class="lap-top"><span class="bud">₹40–60K</span><span class="persona">parents/home</span></div>
-<h3>Dell 15 Core 3-100U</h3><div class="specs"><span class="spec">Core 3 100U</span><span class="spec">8GB DDR4 (upgradeable)</span><span class="spec">512GB</span><span class="spec">120Hz FHD IPS</span></div>
-<p class="why"><b>Why:</b> Upgradeable 8GB</p><p class="watch"><b>Watch out:</b> Prefer 16GB version B0GV1L119H</p>
-<div class="price"><span class="today">Today ₹57,490</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0FZKZTXSN?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b6080" data-p="student" id="B0DTYKLHYC">
-<div class="lap-top"><span class="bud">₹60–80K</span><span class="persona">coding student (top pick)</span></div>
-<h3>ASUS Vivobook 15 i5 13th Gen 16/512</h3><div class="specs"><span class="spec">i5-13420H</span><span class="spec">16GB</span><span class="spec">512GB</span><span class="spec">15.6 FHD</span></div>
-<p class="why"><b>Why:</b> Best coding value; 481 reviews</p><p class="watch"><b>Watch out:</b> Battery average; basic graphics</p>
-<div class="price"><span class="today">Today ₹69,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0DTYKLHYC?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b6080" data-p="office" id="B0GV1L119H">
-<div class="lap-top"><span class="bud">₹60–80K</span><span class="persona">parents/office</span></div>
-<h3>Dell 15 Core 3 100U</h3><div class="specs"><span class="spec">Core 3 100U</span><span class="spec">16GB DDR4</span><span class="spec">512GB</span></div>
-<p class="why"><b>Why:</b> Most-reviewed pick (1,125)</p><p class="watch"><b>Watch out:</b> Core 3 is entry level</p>
-<div class="price"><span class="today">Today ₹66,490</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0GV1L119H?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b6080" data-p="student" id="B0FMRSDQL2">
-<div class="lap-top"><span class="bud">₹60–80K</span><span class="persona">students (light, daily carry)</span></div>
-<h3>ASUS Vivobook 14 Ryzen AI 330</h3><div class="specs"><span class="spec">Ryzen AI 5 330</span><span class="spec">16GB</span><span class="spec">512GB</span><span class="spec">14in</span></div>
-<p class="why"><b>Why:</b> Newer chip, 14in</p><p class="watch"><b>Watch out:</b> 16 reviews</p>
-<div class="price"><span class="today">Today ₹70,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0FMRSDQL2?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b6080" data-p="business" id="B0DSFQZTVW">
-<div class="lap-top"><span class="bud">₹60–80K</span><span class="persona">business</span></div>
-<h3>Dell 15 SmartChoice i5-1334U 16GB/1TB</h3><div class="specs"><span class="spec">i5-1334U</span><span class="spec">16GB</span><span class="spec">1TB</span><span class="spec">15.6in FHD</span><span class="spec">1.62 kg</span></div>
-<p class="why"><b>Why:</b> 1TB for files/billing</p><p class="watch"><b>Watch out:</b> U-series, not for gaming</p>
-<div class="price"><span class="today">Today ₹76,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0DSFQZTVW?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b6080" data-p="student" id="B0F5W5FLPP">
-<div class="lap-top"><span class="bud">₹60–80K</span><span class="persona">coding + power</span></div>
-<h3>HP 15 Ryzen 7 7735HS 16/512</h3><div class="specs"><span class="spec">Ryzen 7 7735HS</span><span class="spec">16GB DDR5</span><span class="spec">512GB</span></div>
-<p class="why"><b>Why:</b> H-series power</p><p class="watch"><b>Watch out:</b> Only 2 left on 30 Sep</p>
-<div class="price"><span class="today">Today ₹79,650</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0F5W5FLPP?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b6080" data-p="gaming" id="B0H6J2QR44">
-<div class="lap-top"><span class="bud">₹60–80K</span><span class="persona">gaming (entry)</span></div>
-<h3>Acer ALG AL15G-53 (Core 5 210H, RTX 3050)</h3><div class="specs"><span class="spec">Core 5 210H</span><span class="spec">RTX 3050 4GB</span><span class="spec">16GB</span><span class="spec">512GB</span><span class="spec">15.6in FHD 144Hz</span><span class="spec">1.99 kg</span></div>
-<p class="why"><b>Why:</b> Live below teaser low: buy-now signal</p><p class="watch"><b>Watch out:</b> 4 reviews; 4GB VRAM</p>
-<div class="price"><span class="today">Today ₹79,900</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹80,090–₹89,990</div></div><a class="amz" href="https://www.amazon.in/dp/B0H6J2QR44?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b80120" data-p="student office" id="B0GWHGS8P5">
-<div class="lap-top"><span class="bud">₹80K–1.2L</span><span class="persona">office/students (new chip)</span></div>
-<h3>Dell 15 AI (Core Ultra 5 225H)</h3><div class="specs"><span class="spec">Core Ultra 5 225H</span><span class="spec">16GB DDR5</span><span class="spec">512GB</span><span class="spec">Arc</span><span class="spec">15.6in FHD anti-glare</span><span class="spec">1.66 kg</span></div>
-<p class="why"><b>Why:</b> Newer Intel chip</p><p class="watch"><b>Watch out:</b> 15 reviews</p>
-<div class="price"><span class="today">Today ₹84,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0GWHGS8P5?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b80120" data-p="creators" id="B0DTYHT8MN">
-<div class="lap-top"><span class="bud">₹80K–1.2L</span><span class="persona">creators/travel</span></div>
-<h3>ASUS Zenbook A14 OLED Snapdragon X 16GB</h3><div class="specs"><span class="spec">Snapdragon X</span><span class="spec">16GB</span><span class="spec">OLED</span></div>
-<p class="why"><b>Why:</b> Very light OLED</p><p class="watch"><b>Watch out:</b> ARM app compatibility; 11 reviews</p>
-<div class="price"><span class="today">Today ₹86,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0DTYHT8MN?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b80120" data-p="gaming" id="B0DXVGVNKN">
-<div class="lap-top"><span class="bud">₹80K–1.2L</span><span class="persona">gaming (safer entry)</span></div>
-<h3>Acer ALG i5-13420H RTX</h3><div class="specs"><span class="spec">i5-13420H</span><span class="spec">RTX 3050</span><span class="spec">16GB</span><span class="spec">15.6in</span><span class="spec">1.9 kg</span></div>
-<p class="why"><b>Why:</b> 367 reviews</p><p class="watch"><b>Watch out:</b> Heavier than ultrabooks</p>
-<div class="price"><span class="today">Today ₹88,390</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0DXVGVNKN?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b80120" data-p="creators" id="B0DDQ6HFR8">
-<div class="lap-top"><span class="bud">₹80K–1.2L</span><span class="persona">creators (big screen)</span></div>
-<h3>ASUS Vivobook 16X i5-13420H</h3><div class="specs"><span class="spec">i5-13420H</span><span class="spec">NVIDIA RTX</span><span class="spec">16in</span><span class="spec">1.8 kg</span></div>
-<p class="why"><b>Why:</b> Editing on 16in; 208 reviews</p><p class="watch"><b>Watch out:</b> Only 2 left on 30 Sep</p>
-<div class="price"><span class="today">Today ₹93,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0DDQ6HFR8?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b80120" data-p="gaming" id="B0H25X3W7F">
-<div class="lap-top"><span class="bud">₹80K–1.2L</span><span class="persona">gaming</span></div>
-<h3>ASUS TUF A15 (2026) Smartchoice FA506NCG</h3><div class="specs"><span class="spec">Ryzen 7 8845HS</span><span class="spec">RTX 3050 4GB</span><span class="spec">16GB DDR5</span><span class="spec">144Hz</span><span class="spec">15.6in FHD 144Hz</span><span class="spec">2.3 kg</span></div>
-<p class="why"><b>Why:</b> Live ₹5K below teaser low</p><p class="watch"><b>Watch out:</b> 2 reviews; 2.3 kg</p>
-<div class="price"><span class="today">Today ₹1,04,990</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹1,10,090–₹1,19,990</div></div><a class="amz" href="https://www.amazon.in/dp/B0H25X3W7F?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b80120" data-p="gaming" id="B0GTZJVD3Y">
-<div class="lap-top"><span class="bud">₹80K–1.2L</span><span class="persona">gaming (wait)</span></div>
-<h3>Lenovo LOQ Essential 83S0009SIN</h3><div class="specs"><span class="spec">Ryzen 7 7735HS</span><span class="spec">RTX 3050 6GB</span><span class="spec">16GB</span><span class="spec">144Hz</span><span class="spec">15.6in 144Hz</span><span class="spec">1.8 kg</span></div>
-<p class="why"><b>Why:</b> Wait for 8 Oct: teaser 9-19K lower</p><p class="watch"><b>Watch out:</b> 1 review</p>
-<div class="price"><span class="today">Today ₹1,08,890</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹90,090–₹99,990</div></div><a class="amz" href="https://www.amazon.in/dp/B0GTZJVD3Y?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b80120" data-p="gaming" id="B0G46HR61G">
-<div class="lap-top"><span class="bud">₹80K–1.2L</span><span class="persona">gaming</span></div>
-<h3>HP Smartchoice Victus RTX 3050 (i5-14450HX)</h3><div class="specs"><span class="spec">i5-14450HX</span><span class="spec">RTX 3050 6GB</span><span class="spec">24GB DDR5</span><span class="spec">144Hz</span><span class="spec">15.6in FHD 144Hz</span><span class="spec">2.29 kg</span></div>
-<p class="why"><b>Why:</b> 24GB RAM; 72 reviews</p><p class="watch"><b>Watch out:</b> Teaser unreadable</p>
-<div class="price"><span class="today">Today ₹1,08,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0G46HR61G?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="b80120" data-p="gaming" id="B0FJYJP1L6">
-<div class="lap-top"><span class="bud">₹80K–1.2L</span><span class="persona">gaming + AI</span></div>
-<h3>HP Victus Ryzen 7 7445HS RTX 4050</h3><div class="specs"><span class="spec">Ryzen 7 7445HS</span><span class="spec">RTX 4050 6GB</span><span class="spec">16GB DDR5</span></div>
-<p class="why"><b>Why:</b> RTX 4050 at lowest price; 142 reviews</p><p class="watch"><b>Watch out:</b> Check GPU TGP in reviews</p>
-<div class="price"><span class="today">Today ₹1,14,990</span> <span class="asof">(as of 30 Sep)</span></div><a class="amz" href="https://www.amazon.in/dp/B0FJYJP1L6?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap payoff-card" data-b="a120" data-p="gaming" id="B0GT11NJ6T">
-<div class="lap-top"><span class="bud">Above ₹1.2L</span><span class="persona">gaming + AI (wait)</span><span class="end">From the end of the video</span></div>
-<h3>HP Victus RTX 4050 (fa2531tx)</h3><div class="specs"><span class="spec">i7-13650HX</span><span class="spec">RTX 4050 6GB</span><span class="spec">24GB DDR5</span><span class="spec">144Hz</span><span class="spec">15.6in FHD IPS 144Hz 300 nits</span><span class="spec">2.29 kg</span></div>
-<p class="why"><b>Why:</b> Wait: teaser ₹23-33K lower</p><p class="watch"><b>Watch out:</b> 6 reviews</p>
-<div class="price"><span class="today">Today ₹1,42,990</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹1,10,090–₹1,19,990</div></div><a class="amz" href="https://www.amazon.in/dp/B0GT11NJ6T?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="a120" data-p="gaming" id="B0H265CG8K">
-<div class="lap-top"><span class="bud">Above ₹1.2L</span><span class="persona">gaming</span></div>
-<h3>ASUS Gaming V16 (2026)</h3><div class="specs"><span class="spec">Core 5 210H</span><span class="spec">RTX 5050 8GB</span><span class="spec">16GB</span><span class="spec">16in</span><span class="spec">1.95 kg</span></div>
-<p class="why"><b>Why:</b> Live at range top: check 8 Oct</p><p class="watch"><b>Watch out:</b> No reviews shown</p>
-<div class="price"><span class="today">Today ₹1,39,990</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹1,30,090–₹1,39,990</div></div><a class="amz" href="https://www.amazon.in/dp/B0H265CG8K?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="a120" data-p="gaming" id="B0HCP993SM">
-<div class="lap-top"><span class="bud">Above ₹1.2L</span><span class="persona">gaming (16in)</span></div>
-<h3>ASUS TUF 16 (2026) RTX 5050</h3><div class="specs"><span class="spec">i5-14450HX</span><span class="spec">RTX 5050 8GB</span><span class="spec">16GB</span><span class="spec">16in</span><span class="spec">2.2 kg</span></div>
-<p class="why"><b>Why:</b> Live at range top: check 8 Oct</p><p class="watch"><b>Watch out:</b> No reviews shown</p>
-<div class="price"><span class="today">Today ₹1,59,990</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹1,50,090–₹1,59,990</div></div><a class="amz" href="https://www.amazon.in/dp/B0HCP993SM?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="a120" data-p="gaming" id="B0H9XCDLBW">
-<div class="lap-top"><span class="bud">Above ₹1.2L</span><span class="persona">serious gaming</span></div>
-<h3>Dell Alienware 15 (Ryzen 7 260, RTX 5060)</h3><div class="specs"><span class="spec">Ryzen 7 260</span><span class="spec">RTX 5060 8GB</span><span class="spec">16GB</span><span class="spec">165Hz</span><span class="spec">15.3in WUXGA 165Hz 300 nits</span><span class="spec">2.25 kg</span></div>
-<p class="why"><b>Why:</b> Inside range: compare with bank offer</p><p class="watch"><b>Watch out:</b> 4 reviews</p>
-<div class="price"><span class="today">Today ₹1,67,490</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹1,60,090–₹1,69,990</div></div><a class="amz" href="https://www.amazon.in/dp/B0H9XCDLBW?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="a120" data-p="gaming" id="B0G3V4R8LK">
-<div class="lap-top"><span class="bud">Above ₹1.2L</span><span class="persona">serious gaming</span></div>
-<h3>HP Omen Smartchoice (Core Ultra 7 255H, RTX 5060)</h3><div class="specs"><span class="spec">Core Ultra 7 255H</span><span class="spec">RTX 5060 8GB</span><span class="spec">24GB</span><span class="spec">16in 165Hz</span><span class="spec">2.43 kg</span></div>
-<p class="why"><b>Why:</b> Live at range top</p><p class="watch"><b>Watch out:</b> ₹12K more than Alienware, same GPU</p>
-<div class="price"><span class="today">Today ₹1,79,857</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹1,70,060–₹1,79,960</div></div><a class="amz" href="https://www.amazon.in/dp/B0G3V4R8LK?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div><div class="lap" data-b="a120" data-p="creators" id="B0FYPY8SKG">
-<div class="lap-top"><span class="bud">Above ₹1.2L</span><span class="persona">pro creators/3D only</span></div>
-<h3>ASUS ProArt P16 OLED (2025) RTX 5090</h3><div class="specs"><span class="spec">Ryzen AI 9 HX 370</span><span class="spec">RTX 5090 24GB</span><span class="spec">64GB</span><span class="spec">2TB</span><span class="spec">OLED</span><span class="spec">16in 4K OLED touch 120Hz</span><span class="spec">1.95 kg</span></div>
-<p class="why"><b>Why:</b> Pro only</p><p class="watch"><b>Watch out:</b> Not for students</p>
-<div class="price"><span class="today">Today ₹4,99,990</span> <span class="asof">(as of 30 Sep)</span><div class="teaser">Sale teaser ₹4,90,090–₹4,99,990</div></div><a class="amz" href="https://www.amazon.in/dp/B0FYPY8SKG?tag=swaroop057-21" target="_blank" rel="sponsored noopener">Check price on Amazon &rarr;</a></div></div><div class="empty" id="empty">No picks match both filters. Tap All to reset.</div>
-<div class="section-label" style="margin-top:28px">SKIP THESE</div>
-<div class="skip-row"><div><h4>HP 15 Ryzen 3 7320U</h4><p>8GB soldered; Aspire Lite gives 16GB</p><div class="specs"><span class="spec">Ryzen 3 7320U</span><span class="spec">8GB LPDDR5</span><span class="spec">512GB</span></div></div><div class="skip-price">₹56,990<small>₹40–60K</small></div></div><div class="skip-row"><div><h4>ASUS Vivobook 15 Ryzen 7 16/512</h4><p>2021 chip behind &#x27;Ryzen 7&#x27;</p><div class="specs"><span class="spec">Ryzen 7 5825U</span><span class="spec">16GB</span><span class="spec">512GB</span></div></div><div class="skip-price">₹79,990<small>₹60–80K</small></div></div>
-<div class="section-label" style="margin-top:28px">GETTING PLACED?</div>
-<a class="ws" href="https://mentiby.com/go/yt-desc-51" target="_blank" rel="noopener"><h3>The Placement Plan</h3><p>Live Telugu workshop, Sat 17 Oct. First 200: Rs 399.</p><span>Book your seat &rarr;</span></a>
-<div class="section-label">COMMUNITY</div>
-<a class="wa-card" href="https://chat.whatsapp.com/KGRc7iuihShBMSa1jDh44A" target="_blank" rel="noopener"><div class="wa-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5-.17 0-.37-.03-.57-.03-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2 22l5.34-1.4a9.82 9.82 0 0 0 4.7 1.2h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2zm0 17.96h-.01a8.2 8.2 0 0 1-4.17-1.14l-.3-.18-3.1.81.83-3.02-.2-.31a8.14 8.14 0 0 1-1.25-4.36c0-4.52 3.68-8.19 8.2-8.19 2.19 0 4.25.85 5.8 2.4a8.15 8.15 0 0 1 2.4 5.8c0 4.52-3.68 8.19-8.2 8.19z"/></svg></div><div class="info"><h4>Join the free WhatsApp community</h4><p>Daily opportunities, doubts cleared, and students working on the same goals. Free, always.</p></div><div class="wa-go">Join &rarr;</div></a>
+<header><div class="wrap"><span class="brand">Swaroop<b>Talks</b> Picks</span><span class="hsub">Amazon Great Indian Festival 2026 · <strong>Sale starts 8 Oct</strong></span></div></header>
+<div class="disc"><div class="wrap">As an Amazon Associate I earn from qualifying purchases. Same price for you.</div></div>
+<nav class="bar" aria-label="Filters"><div class="wrap">
+<div class="row" id="bud"><span class="lbl">Budget</span></div>
+<div class="row" id="use"><span class="lbl">Use</span></div>
+<div class="sortrow"><span class="count" id="count" aria-live="polite"></span>
+<label><span class="count">Sort </span><select id="sort"><option value="rec">Recommended</option><option value="asc">Price: low to high</option><option value="desc">Price: high to low</option></select></label></div>
+</div></nav>
+<main class="wrap">
+<section class="hero" id="hero" aria-label="Editor's pick"></section>
+<div class="grid" id="grid"></div>
+<h3 class="sec">Skip these</h3>
+<div class="skip" id="skip"></div>
+<div class="box"><h4>How to read the teaser price</h4>
+<ol><li>Before the sale, Amazon hides digits, like <b>₹1,1_,_90</b>. That means the sale price is somewhere from <b>₹1,10,090 to ₹1,19,990</b>.</li>
+<li>Compare with today's price on the tile. If today is already <b>below</b> the teaser range (green badge), buy now. If it is above, wait for 8 Oct.</li>
+<li>Bank card offers (₹2,000 to ₹7,000) come on top and are not in these prices.</li></ol></div>
+<div class="cta">
+<a class="card ws" href="https://mentiby.com/go/yt-desc-51" target="_blank" rel="noopener"><div class="k">Live workshop · MentiBY</div><div class="h">Sat 17 Oct · Rs 399 for the first 200</div><div>Bought the laptop? Learn what to build on it.</div><span class="go">Book my seat →</span></a>
+<a class="card wa" href="https://chat.whatsapp.com/KGRc7iuihShBMSa1jDh44A" target="_blank" rel="noopener"><div class="k">Free community</div><div class="h">Join the WhatsApp community</div><div>Ask which laptop fits your budget. Get sale price drops.</div><span class="go">Join on WhatsApp →</span></a>
 </div>
-<footer class="upd">Last updated 30 Sep 2026</footer>
+</main>
+<footer>Prices change, check on Amazon · last updated 30 Sep 2026<br>Made by SwaroopTalks · CodeWithSwaroop</footer>
+<dialog id="dlg" aria-labelledby="dt"><div class="sh"><div class="shh"><img id="di" alt="" width="76" height="76"><div><h2 id="dt"></h2><div id="dp"></div></div><button class="x" id="dx" aria-label="Close">×</button></div>
+<div class="shb"><table id="ds"></table><h4>Why we picked it</h4><p id="dw"></p><h4>Watch out</h4><div class="wo" id="do"></div></div>
+<div class="shf"><a class="btn" id="db" target="_blank" rel="sponsored noopener">View on Amazon</a></div></div></dialog>
 <script>
-let fb=null,fp=null;const cs=document.querySelectorAll('.chip');
-cs.forEach(c=>c.onclick=()=>{const f=c.dataset.f,v=c.dataset.v;
-if(f==='all'){fb=fp=null}else if(f==='b'){fb=fb===v?null:v}else{fp=fp===v?null:v}
-cs.forEach(x=>x.classList.toggle('on',(x.dataset.f==='all'&&!fb&&!fp)||(x.dataset.f==='b'&&x.dataset.v===fb)||(x.dataset.f==='p'&&x.dataset.v===fp)));
-let n=0;document.querySelectorAll('.lap').forEach(l=>{const ok=(!fb||l.dataset.b===fb)&&(!fp||l.dataset.p.split(' ').includes(fp));l.style.display=ok?'':'none';n+=ok});
-document.getElementById('empty').style.display=n?'none':'block';});
+const ITEMS=[{"asin": "B0H2J8DDKH", "title": "ASUS Chromebook CM1405 MediaTek 4/64", "budget": "<40K", "persona": "kids/school (parents buying)", "price": 28990, "mrp": 37990, "lo": null, "hi": null, "rating": 4.0, "reviews": 18, "why": "Cheapest sale-page pick for online classes", "watch": "ChromeOS: no MS Office desktop app; 4GB/64GB; 18 reviews", "specs": [["Processor", "MediaTek"], ["RAM", "4GB"], ["Storage", "64GB"], ["Display / OS", "ChromeOS"]], "uses": ["students", "home", "kids"], "badges": ["Best for kids/school"], "url": "https://www.amazon.in/dp/B0H2J8DDKH?tag=swaroop057-21", "img": "img/B0H2J8DDKH.webp"}, {"asin": "B0GV15KBMK", "title": "ASUS Chromebook CX1405 Intel N50 8/128", "budget": "<40K", "persona": "seniors/basic", "price": 39990, "mrp": 51990, "lo": null, "hi": null, "rating": 3.8, "reviews": 30, "why": "Simple browsing/YouTube/mail", "watch": "Not Windows; 30 reviews", "specs": [["Processor", "Intel N50"], ["RAM", "8GB"], ["Storage", "ChromeOS"]], "uses": ["home"], "badges": ["Best for seniors/basic"], "url": "https://www.amazon.in/dp/B0GV15KBMK?tag=swaroop057-21", "img": "img/B0GV15KBMK.webp"}, {"asin": "B0GYRK1RZC", "title": "Acer Aspire One Ryzen 3 7320U", "budget": "<40K", "persona": "basic Windows (not for coding)", "price": 38990, "mrp": 71999, "lo": null, "hi": null, "rating": 3.6, "reviews": 103, "why": "Cheapest Windows", "watch": "8GB soldered, 256GB, HD TN", "specs": [["Processor", "Ryzen 3 7320U"], ["RAM", "8GB LPDDR5"], ["Storage", "256GB"], ["Display / OS", "14in HD TN"]], "uses": ["coding", "home"], "badges": ["Best for basic Windows · not for coding"], "url": "https://www.amazon.in/dp/B0GYRK1RZC?tag=swaroop057-21", "img": "img/B0GYRK1RZC.webp"}, {"asin": "B0DG2GCTD7", "title": "Acer SmartChoice Aspire Lite AL15-41 Ryzen 5 5625U", "budget": "40-60K", "persona": "coding student (first year)", "price": 59990, "mrp": 89999, "lo": null, "hi": null, "rating": 4.0, "reviews": 925, "why": "Only 16GB sale-page pick under 60K; 925 reviews", "watch": "TN panel; older chip", "specs": [["Processor", "AMD Ryzen 5 5625U"], ["Graphics", "Integrated"], ["RAM", "16GB"], ["Storage", "512GB SSD"], ["Display", "15.6in FHD"], ["Weight", "1.59 kg"], ["Battery", "36 Wh"]], "uses": ["coding", "students"], "badges": ["Best for coding student · first year"], "url": "https://www.amazon.in/dp/B0DG2GCTD7?tag=swaroop057-21", "img": "img/B0DG2GCTD7.webp"}, {"asin": "B0FZKZTXSN", "title": "Dell 15 Core 3-100U", "budget": "40-60K", "persona": "parents/home", "price": 57490, "mrp": 62598, "lo": null, "hi": null, "rating": 4.0, "reviews": 376, "why": "Upgradeable 8GB", "watch": "Prefer 16GB version B0GV1L119H", "specs": [["Processor", "Core 3 100U"], ["RAM", "8GB DDR4 (upgradeable)"], ["Storage", "512GB"], ["Display / OS", "120Hz FHD IPS"]], "uses": ["home"], "badges": ["Best for parents/home"], "url": "https://www.amazon.in/dp/B0FZKZTXSN?tag=swaroop057-21", "img": "img/B0FZKZTXSN.webp"}, {"asin": "B0DTYKLHYC", "title": "ASUS Vivobook 15 i5 13th Gen 16/512", "budget": "60-80K", "persona": "coding student (top pick)", "price": 69990, "mrp": null, "lo": null, "hi": null, "rating": 4.1, "reviews": 481, "why": "Best coding value; 481 reviews", "watch": "Battery average; basic graphics", "specs": [["Processor", "i5-13420H"], ["RAM", "16GB"], ["Storage", "512GB"], ["Display / OS", "15.6 FHD"]], "uses": ["coding", "students"], "badges": ["Top pick", "Best for coding student"], "url": "https://www.amazon.in/dp/B0DTYKLHYC?tag=swaroop057-21", "img": "img/B0DTYKLHYC.webp"}, {"asin": "B0GV1L119H", "title": "Dell 15 Core 3 100U", "budget": "60-80K", "persona": "parents/office", "price": 66490, "mrp": 72781, "lo": null, "hi": null, "rating": 4.0, "reviews": 1125, "why": "Most-reviewed pick (1,125)", "watch": "Core 3 is entry level", "specs": [["Processor", "Core 3 100U"], ["RAM", "16GB DDR4"], ["Storage", "512GB"]], "uses": ["home"], "badges": ["Best for parents/office"], "url": "https://www.amazon.in/dp/B0GV1L119H?tag=swaroop057-21", "img": "img/B0GV1L119H.webp"}, {"asin": "B0FMRSDQL2", "title": "ASUS Vivobook 14 Ryzen AI 330", "budget": "60-80K", "persona": "students (light, daily carry)", "price": 70990, "mrp": 81990, "lo": null, "hi": null, "rating": 2.9, "reviews": 16, "why": "Newer chip, 14in", "watch": "16 reviews", "specs": [["Processor", "Ryzen AI 5 330"], ["RAM", "16GB"], ["Storage", "512GB"], ["Display / OS", "14in"]], "uses": ["students"], "badges": ["Best for students · light, daily carry"], "url": "https://www.amazon.in/dp/B0FMRSDQL2?tag=swaroop057-21", "img": "img/B0FMRSDQL2.webp"}, {"asin": "B0DSFQZTVW", "title": "Dell 15 SmartChoice i5-1334U 16GB/1TB", "budget": "60-80K", "persona": "business", "price": 76990, "mrp": 99478, "lo": null, "hi": null, "rating": 4.0, "reviews": 296, "why": "1TB for files/billing", "watch": "U-series, not for gaming", "specs": [["Processor", "Intel Core i5-1334U"], ["Graphics", "Integrated"], ["RAM", "16GB"], ["Storage", "1TB SSD"], ["Display", "15.6in FHD"], ["Weight", "1.62 kg"], ["Battery", "41 Wh"]], "uses": ["home"], "badges": ["Best for business"], "url": "https://www.amazon.in/dp/B0DSFQZTVW?tag=swaroop057-21", "img": "img/B0DSFQZTVW.webp"}, {"asin": "B0F5W5FLPP", "title": "HP 15 Ryzen 7 7735HS 16/512", "budget": "60-80K", "persona": "coding + power", "price": 79650, "mrp": 88990, "lo": null, "hi": null, "rating": 3.3, "reviews": 116, "why": "H-series power", "watch": "Only 2 left on 30 Sep", "specs": [["Processor", "Ryzen 7 7735HS"], ["RAM", "16GB DDR5"], ["Storage", "512GB"]], "uses": ["coding"], "badges": ["Best for coding + power"], "url": "https://www.amazon.in/dp/B0F5W5FLPP?tag=swaroop057-21", "img": "img/B0F5W5FLPP.webp"}, {"asin": "B0H6J2QR44", "title": "Acer ALG AL15G-53 (Core 5 210H, RTX 3050)", "budget": "60-80K", "persona": "gaming (entry)", "price": 79900, "mrp": 99999, "lo": 80090, "hi": 89990, "rating": 3.8, "reviews": 4, "why": "Live below teaser low: buy-now signal", "watch": "4 reviews; 4GB VRAM", "specs": [["Processor", "Intel Core 5 210H"], ["Graphics", "RTX 3050 4GB"], ["RAM", "16GB"], ["Storage", "512GB SSD"], ["Display", "15.6in FHD 144Hz"], ["Weight", "1.99 kg"], ["Battery", "54 Wh"]], "uses": ["gaming"], "badges": ["Best for gaming · entry"], "url": "https://www.amazon.in/dp/B0H6J2QR44?tag=swaroop057-21", "img": "img/B0H6J2QR44.webp"}, {"asin": "B0GWHGS8P5", "title": "Dell 15 AI (Core Ultra 5 225H)", "budget": "80K-1.2L", "persona": "office/students (new chip)", "price": 84990, "mrp": 91715, "lo": null, "hi": null, "rating": 4.0, "reviews": 15, "why": "Newer Intel chip", "watch": "15 reviews", "specs": [["Processor", "Intel Core Ultra 5 225H"], ["Graphics", "Intel Arc"], ["RAM", "16GB DDR5"], ["Storage", "512GB SSD"], ["Display", "15.6in FHD anti-glare"], ["Weight", "1.66 kg"], ["Battery", "41 Wh"]], "uses": ["students", "home"], "badges": ["Best for office/students · new chip"], "url": "https://www.amazon.in/dp/B0GWHGS8P5?tag=swaroop057-21", "img": "img/B0GWHGS8P5.webp"}, {"asin": "B0DTYHT8MN", "title": "ASUS Zenbook A14 OLED Snapdragon X 16GB", "budget": "80K-1.2L", "persona": "creators/travel", "price": 86990, "mrp": 122990, "lo": null, "hi": null, "rating": 3.8, "reviews": 11, "why": "Very light OLED", "watch": "ARM app compatibility; 11 reviews", "specs": [["Processor", "Snapdragon X"], ["RAM", "16GB"], ["Storage", "OLED"]], "uses": ["creators"], "badges": ["Best for creators/travel"], "url": "https://www.amazon.in/dp/B0DTYHT8MN?tag=swaroop057-21", "img": "img/B0DTYHT8MN.webp"}, {"asin": "B0DXVGVNKN", "title": "Acer ALG i5-13420H RTX", "budget": "80K-1.2L", "persona": "gaming (safer entry)", "price": 88390, "mrp": 99000, "lo": null, "hi": null, "rating": 4.1, "reviews": 367, "why": "367 reviews", "watch": "Heavier than ultrabooks", "specs": [["Processor", "Intel Core i5-13420H"], ["Graphics", "NVIDIA RTX"], ["Display", "15.6in"], ["Weight", "1.9 kg"], ["Battery", "54 Wh"]], "uses": ["gaming"], "badges": ["Best for gaming · safer entry"], "url": "https://www.amazon.in/dp/B0DXVGVNKN?tag=swaroop057-21", "img": "img/B0DXVGVNKN.webp"}, {"asin": "B0DDQ6HFR8", "title": "ASUS Vivobook 16X i5-13420H", "budget": "80K-1.2L", "persona": "creators (big screen)", "price": 93990, "mrp": 103990, "lo": null, "hi": null, "rating": 3.6, "reviews": 208, "why": "Editing on 16in; 208 reviews", "watch": "Only 2 left on 30 Sep", "specs": [["Processor", "Intel Core i5-13420H"], ["Graphics", "NVIDIA RTX (see page)"], ["Display", "16in"], ["Weight", "1.8 kg"]], "uses": ["creators"], "badges": ["Best for creators · big screen"], "url": "https://www.amazon.in/dp/B0DDQ6HFR8?tag=swaroop057-21", "img": "img/B0DDQ6HFR8.webp"}, {"asin": "B0H25X3W7F", "title": "ASUS TUF A15 (2026) Smartchoice FA506NCG", "budget": "80K-1.2L", "persona": "gaming", "price": 104990, "mrp": 155990, "lo": 110090, "hi": 119990, "rating": 3.9, "reviews": 2, "why": "Live ₹5K below teaser low", "watch": "2 reviews; 2.3 kg", "specs": [["Processor", "AMD Ryzen 7 8845HS"], ["Graphics", "RTX 3050 4GB"], ["RAM", "16GB DDR5 (upgradeable)"], ["Storage", "512GB SSD"], ["Display", "15.6in FHD 144Hz"], ["Weight", "2.3 kg"], ["Battery", "48 Wh"]], "uses": ["gaming"], "badges": ["Best for gaming"], "url": "https://www.amazon.in/dp/B0H25X3W7F?tag=swaroop057-21", "img": "img/B0H25X3W7F.webp"}, {"asin": "B0GTZJVD3Y", "title": "Lenovo LOQ Essential 83S0009SIN", "budget": "80K-1.2L", "persona": "gaming (wait)", "price": 108890, "mrp": 125390, "lo": 90090, "hi": 99990, "rating": 5.0, "reviews": 1, "why": "Wait for 8 Oct: teaser 9-19K lower", "watch": "1 review", "specs": [["Processor", "AMD Ryzen 7 7735HS"], ["Graphics", "RTX 3050 6GB"], ["RAM", "16GB"], ["Storage", "512GB SSD"], ["Display", "15.6in 144Hz"], ["Weight", "1.8 kg"], ["Battery", "57.5 Wh"]], "uses": ["gaming"], "badges": ["Best for gaming", "Wait for 8 Oct"], "url": "https://www.amazon.in/dp/B0GTZJVD3Y?tag=swaroop057-21", "img": "img/B0GTZJVD3Y.webp"}, {"asin": "B0G46HR61G", "title": "HP Smartchoice Victus RTX 3050 (i5-14450HX)", "budget": "80K-1.2L", "persona": "gaming", "price": 108990, "mrp": null, "lo": null, "hi": null, "rating": 3.8, "reviews": 72, "why": "24GB RAM; 72 reviews", "watch": "Teaser unreadable", "specs": [["Processor", "Intel Core i5-14450HX"], ["Graphics", "RTX 3050 6GB"], ["RAM", "24GB DDR5 (upgradeable)"], ["Storage", "512GB SSD"], ["Display", "15.6in FHD 144Hz"], ["Weight", "2.29 kg"], ["Battery", "70 Wh"]], "uses": ["gaming"], "badges": ["Best for gaming"], "url": "https://www.amazon.in/dp/B0G46HR61G?tag=swaroop057-21", "img": "img/B0G46HR61G.webp"}, {"asin": "B0FJYJP1L6", "title": "HP Victus Ryzen 7 7445HS RTX 4050", "budget": "80K-1.2L", "persona": "gaming + AI", "price": 114990, "mrp": null, "lo": null, "hi": null, "rating": 4.2, "reviews": 142, "why": "RTX 4050 at lowest price; 142 reviews", "watch": "Check GPU TGP in reviews", "specs": [["Processor", "Ryzen 7 7445HS"], ["RAM", "RTX 4050 6GB"], ["Storage", "16GB DDR5"]], "uses": ["gaming", "creators"], "badges": ["Best for gaming + AI"], "url": "https://www.amazon.in/dp/B0FJYJP1L6?tag=swaroop057-21", "img": "img/B0FJYJP1L6.webp"}, {"asin": "B0GT11NJ6T", "title": "HP Victus RTX 4050 (fa2531tx)", "budget": ">1.2L", "persona": "gaming + AI (wait)", "price": 142990, "mrp": 192984, "lo": 110090, "hi": 119990, "rating": 4.2, "reviews": 6, "why": "Wait: teaser ₹23-33K lower", "watch": "6 reviews", "specs": [["Processor", "Intel Core i7-13650HX"], ["Graphics", "RTX 4050 6GB"], ["RAM", "24GB DDR5 (upgradeable)"], ["Storage", "512GB SSD"], ["Display", "15.6in FHD IPS 144Hz 300 nits"], ["Weight", "2.29 kg"], ["Battery", "70 Wh"]], "uses": ["gaming", "creators"], "badges": ["Best for gaming + AI", "Wait for 8 Oct"], "url": "https://www.amazon.in/dp/B0GT11NJ6T?tag=swaroop057-21", "img": "img/B0GT11NJ6T.webp"}, {"asin": "B0H265CG8K", "title": "ASUS Gaming V16 (2026)", "budget": ">1.2L", "persona": "gaming", "price": 139990, "mrp": 179990, "lo": 130090, "hi": 139990, "rating": null, "reviews": null, "why": "Live at range top: check 8 Oct", "watch": "No reviews shown", "specs": [["Processor", "Intel Core 5 210H"], ["Graphics", "RTX 5050 8GB"], ["RAM", "16GB"], ["Storage", "512GB SSD"], ["Display", "16in"], ["Weight", "1.95 kg"], ["Battery", "63 Wh"]], "uses": ["gaming"], "badges": ["Best for gaming"], "url": "https://www.amazon.in/dp/B0H265CG8K?tag=swaroop057-21", "img": "img/B0H265CG8K.webp"}, {"asin": "B0HCP993SM", "title": "ASUS TUF 16 (2026) RTX 5050", "budget": ">1.2L", "persona": "gaming (16in)", "price": 159990, "mrp": 220990, "lo": 150090, "hi": 159990, "rating": null, "reviews": null, "why": "Live at range top: check 8 Oct", "watch": "No reviews shown", "specs": [["Processor", "Intel Core i5-14450HX"], ["Graphics", "RTX 5050"], ["RAM", "up to 64GB (per card)"], ["Display", "16in"], ["Weight", "2.2 kg"], ["Battery", "63 Wh"]], "uses": ["gaming"], "badges": ["Best for gaming · 16in"], "url": "https://www.amazon.in/dp/B0HCP993SM?tag=swaroop057-21", "img": "img/B0HCP993SM.webp"}, {"asin": "B0H9XCDLBW", "title": "Dell Alienware 15 (Ryzen 7 260, RTX 5060)", "budget": ">1.2L", "persona": "serious gaming", "price": 167490, "mrp": 221213, "lo": 160090, "hi": 169990, "rating": 3.0, "reviews": 4, "why": "Inside range: compare with bank offer", "watch": "4 reviews", "specs": [["Processor", "AMD Ryzen 7 260"], ["Graphics", "RTX 5060 8GB GDDR7"], ["RAM", "16GB"], ["Storage", "512GB SSD"], ["Display", "15.3in WUXGA 165Hz 300 nits"], ["Weight", "2.25 kg"], ["Battery", "54 Wh"]], "uses": ["gaming"], "badges": ["Best for serious gaming"], "url": "https://www.amazon.in/dp/B0H9XCDLBW?tag=swaroop057-21", "img": "img/B0H9XCDLBW.webp"}, {"asin": "B0G3V4R8LK", "title": "HP Omen Smartchoice (Core Ultra 7 255H, RTX 5060)", "budget": ">1.2L", "persona": "serious gaming", "price": 179857, "mrp": 179858, "lo": 170060, "hi": 179960, "rating": 3.6, "reviews": 7, "why": "Live at range top", "watch": "₹12K more than Alienware, same GPU", "specs": [["Processor", "Intel Core Ultra 7 255H"], ["Graphics", "RTX 5060 8GB"], ["RAM", "24GB"], ["Display", "16in 165Hz"], ["Weight", "2.43 kg"], ["Battery", "83 Wh"]], "uses": ["gaming"], "badges": ["Best for serious gaming"], "url": "https://www.amazon.in/dp/B0G3V4R8LK?tag=swaroop057-21", "img": "img/B0G3V4R8LK.webp"}, {"asin": "B0FYPY8SKG", "title": "ASUS ProArt P16 OLED (2025) RTX 5090", "budget": ">1.2L", "persona": "pro creators/3D only", "price": 499990, "mrp": 755990, "lo": 490090, "hi": 499990, "rating": 5.0, "reviews": 3, "why": "Pro only", "watch": "Not for students", "specs": [["Processor", "AMD Ryzen AI 9 HX 370"], ["Graphics", "RTX 5090 24GB"], ["RAM", "64GB"], ["Storage", "2TB SSD"], ["Display", "16in 4K OLED touch 120Hz"], ["Weight", "1.95 kg"], ["Battery", "90 Wh"]], "uses": ["creators"], "badges": ["Best for pro creators/3D only"], "url": "https://www.amazon.in/dp/B0FYPY8SKG?tag=swaroop057-21", "img": "img/B0FYPY8SKG.webp"}];const SKIPS=[{"asin": "B0FJYJ8LVY", "title": "HP 15 Ryzen 3 7320U", "budget": "40-60K", "persona": "SKIP", "price": 56990, "mrp": null, "lo": null, "hi": null, "rating": 4.2, "reviews": 141, "why": "Skip", "watch": "8GB soldered; Aspire Lite gives 16GB", "specs": [["Processor", "Ryzen 3 7320U"], ["RAM", "8GB LPDDR5"], ["Storage", "512GB"]], "uses": [], "badges": ["Best for SKIP"], "url": "https://www.amazon.in/dp/B0FJYJ8LVY?tag=swaroop057-21", "img": "img/B0FJYJ8LVY.webp"}, {"asin": "B0FC2LKFSC", "title": "ASUS Vivobook 15 Ryzen 7 16/512", "budget": "60-80K", "persona": "SKIP", "price": 79990, "mrp": 96990, "lo": null, "hi": null, "rating": 4.0, "reviews": 241, "why": "Skip", "watch": "2021 chip behind 'Ryzen 7'", "specs": [["Processor", "Ryzen 7 5825U"], ["RAM", "16GB"], ["Storage", "512GB"]], "uses": [], "badges": ["Best for SKIP"], "url": "https://www.amazon.in/dp/B0FC2LKFSC?tag=swaroop057-21", "img": "img/B0FC2LKFSC.webp"}];
+const HERO="B0GT11NJ6T";
+const BUD=["All","<40K","40-60K","60-80K","80K-1.2L",">1.2L"],BL={"<40K":"Under ₹40K","40-60K":"₹40–60K","60-80K":"₹60–80K","80K-1.2L":"₹80K–1.2L",">1.2L":"Above ₹1.2L",All:"All"};
+const USE=[["all","All"],["coding","Coding"],["students","Students"],["gaming","Gaming"],["creators","Creators & AI"],["home","Home & office"],["kids","Kids"]];
+const f=n=>"₹"+n.toLocaleString("en-IN");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let st={b:"All",u:"all",s:"rec"};
+function stars(r){return "★★★★★"}
+function tz(it){if(!it.lo)return"";const below=it.price<it.lo;return `<span class="tz${below?" below":""}">Sale teaser ${f(it.lo)}–${f(it.hi)}${below?" · already lower today":""}</span>`}
+function priceHTML(it){const off=it.mrp?Math.round((1-it.price/it.mrp)*100):0;
+return `<div class="pr"><span class="p"><sup>₹</sup>${it.price.toLocaleString("en-IN")}</span><span class="asof">as of 30 Sep</span></div>${it.mrp?`<div class="mrp">M.R.P. <s>${f(it.mrp)}</s><span class="off">(${off}% off)</span></div>`:""}`}
+function rating(it){return it.rating?`<div class="rt"><span class="st" style="--p:${it.rating*20}%" aria-label="${it.rating} out of 5 stars">${stars(it.rating)}</span>${it.rating.toFixed(1)} <span>(${it.reviews.toLocaleString("en-IN")})</span></div>`:`<div class="rt" style="color:var(--mute)">No ratings yet</div>`}
+function bdg(it){return `<div class="bdg">${it.badges.map(b=>`<span class="pb${b==="Top pick"?" top":b.startsWith("Wait")?" wait":""}">${esc(b)}</span>`).join("")}</div>`}
+function tile(it,i){const off=it.mrp?Math.round((1-it.price/it.mrp)*100):0;
+return `<article class="tile" tabindex="0" role="button" aria-label="${esc(it.title)}, details" data-a="${it.asin}">
+<div class="ph"><img src="${it.img}" alt="${esc(it.title)}" width="500" height="500" loading="${i<4?"eager":"lazy"}" decoding="async">${off>=20?`<span class="deal">${off}% off</span>`:""}</div>
+<div class="body">${bdg(it)}<div class="t">${esc(it.title)}</div>${rating(it)}${priceHTML(it)}${tz(it)}<div class="spacer"></div>
+<a class="btn" href="${it.url}" target="_blank" rel="sponsored noopener">View on Amazon</a></div></article>`}
+function render(){let L=ITEMS.filter(it=>(st.b==="All"||it.budget===st.b)&&(st.u==="all"||it.uses.includes(st.u)));
+if(st.s!=="rec")L=[...L].sort((a,b)=>st.s==="asc"?a.price-b.price:b.price-a.price);
+document.getElementById("grid").innerHTML=L.length?L.map(tile).join(""):`<div class="empty">No picks for this combo. Try another budget.</div>`;
+document.getElementById("count").textContent=`${L.length} laptop${L.length===1?"":"s"}`}
+function chips(id,list,key){const el=document.getElementById(id);list.forEach(([v,l])=>{const b=document.createElement("button");b.className="chip";b.textContent=l;b.setAttribute("aria-pressed",st[key]===v);b.onclick=()=>{st[key]=v;el.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));render()};el.appendChild(b)})}
+chips("bud",BUD.map(b=>[b,BL[b]]),"b");chips("use",USE,"u");
+document.getElementById("sort").onchange=e=>{st.s=e.target.value;render()};
+const h=ITEMS.find(x=>x.asin===HERO);
+document.getElementById("hero").innerHTML=`<div class="pic"><img src="${h.img}" alt="${esc(h.title)}" width="500" height="500"></div><div class="txt"><span class="ep">EDITOR'S PICK · FROM THE VIDEO</span><h2>HP Victus i7-13650HX · RTX 4050 · 24GB DDR5 · 144Hz</h2>${rating(h)}${priceHTML(h)}${tz(h)}
+<div class="note"><b>Honest note:</b> this is the "save almost ₹40K" laptop. Today it is ${f(h.price)}. The teaser says ${f(h.lo)}–${f(h.hi)} on 8 Oct, which is up to ₹32,900 less. The full ~₹40K needs a ~₹7,000 bank card offer that was not live on 30 Sep. Only 6 reviews so far. <b>Do not buy today, wait for 8 Oct.</b></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn" style="padding:0 22px;margin:0" href="${h.url}" target="_blank" rel="sponsored noopener">View on Amazon</a><button class="chip" data-a="${h.asin}" style="min-height:40px">Specs &amp; watch-outs</button></div></div>`;
+document.getElementById("skip").innerHTML=SKIPS.map(it=>`<article class="tile"><div class="ph"><img src="${it.img}" alt="${esc(it.title)}" width="500" height="500" loading="lazy" decoding="async"></div><div class="body"><div class="t">${esc(it.title)}</div><div class="mrp">${f(it.price)} as of 30 Sep</div><div class="why">Skip: ${esc(it.watch)}</div></div></article>`).join("");
+const dlg=document.getElementById("dlg");
+function open(a){const it=ITEMS.find(x=>x.asin===a);if(!it)return;
+di.src=it.img;di.alt=it.title;dt.textContent=it.title;dp.innerHTML=rating(it)+priceHTML(it)+tz(it);
+ds.innerHTML=it.specs.map(([k,v])=>`<tr><td>${esc(k)}</td><td>${esc(v)}</td></tr>`).join("");
+dw.textContent=it.why;document.getElementById("do").textContent=it.watch;db.href=it.url;dlg.showModal()}
+document.addEventListener("click",e=>{if(e.target.closest("a"))return;const t=e.target.closest("[data-a]");if(t&&!t.closest("#skip"))open(t.dataset.a)});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches(".tile[data-a]")){e.preventDefault();open(e.target.dataset.a)}});
+dx.onclick=()=>dlg.close();dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+render();
 </script></body></html>
